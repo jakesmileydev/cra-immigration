@@ -1,3 +1,7 @@
+html {
+  font-size: 110%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -8,10 +12,14 @@ a {
   cursor: pointer;
 }
 section {
-  max-width: 60rem;
+  max-width: 70rem;
   margin: 0 auto;
   margin-bottom: 4rem;
   padding: 2rem;
+}
+h2,
+h4 {
+  color: $text--dark;
 }
 .section-header {
   border-left: 5px solid $gold;

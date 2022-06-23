@@ -8,6 +8,7 @@ export default function Hero() {
           <p>
             Let our experienced team of immigration attorneys guide you through
             this difficult time.
+            <br></br>
           </p>
           <a href="#contact">Free Consultation</a>
         </div>

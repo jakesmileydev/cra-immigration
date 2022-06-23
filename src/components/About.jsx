@@ -6,7 +6,7 @@ export default function About() {
       <div className="about-text">
         <header className="section-header">
           <p>About</p>
-          <h2>CRA Immigration</h2>
+          <h2>Crocker Russell and Associates Immigration</h2>
         </header>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quam,

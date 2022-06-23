@@ -1,0 +1,17 @@
+#footer {
+  background-color: $blue;
+  padding: 3rem 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  //   justify-items: center;
+  color: white;
+  & .footer-logo {
+    & img {
+      width: 60%;
+    }
+  }
+  & h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+}

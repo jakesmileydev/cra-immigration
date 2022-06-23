@@ -1,0 +1,45 @@
+#team {
+  max-width: 80rem;
+  //   display: flex;
+  & .team-cards {
+    display: flex;
+    justify-content: space-between;
+  }
+  & .card-image {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    padding-top: 130%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card {
+    width: 23%;
+    & .card-text {
+      padding: 1rem;
+      background-color: $gold;
+      color: $text--dark;
+    }
+    & .card-name {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    & .card-title {
+      font-style: italic;
+      margin-top: 0.2rem;
+    }
+  }
+  & .card-one .card-image {
+    background-image: url(./images/team.jpg);
+  }
+  & .card-two .card-image {
+    background-image: url(./images/team-2.jpg);
+  }
+  & .card-three .card-image {
+    background-image: url(./images/team-3.jpg);
+  }
+  & .card-four .card-image {
+    background-image: url(./images/team-4.jpg);
+  }
+}

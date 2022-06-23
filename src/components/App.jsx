@@ -2,7 +2,7 @@ import Contact from "./Contact";
 import About from "./About";
 import Testimonials from "./Testimonials";
 import CTA from "./CTA";
-import News from "./News";
+import Team from "./Team";
 import Footer from "./Footer";
 import Awards from "./Awards";
 import Services from "./Services";
@@ -22,7 +22,7 @@ export default function App() {
       <CTA />
       <Testimonials />
       <Contact />
-      <News />
+      <Team />
       <Footer />
     </>
   );

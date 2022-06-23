@@ -3,16 +3,15 @@
   background-image: url("./images/cta.jpg");
   background-size: cover;
   background-position: center;
-  position: relative;
-  height: 17rem;
+  // position: relative;
+  padding: 0;
   & .cta-overlay {
     width: 100%;
     height: 100%;
-    position: absolute;
     top: 0;
     left: 0;
     // background-color: rgba(0, 0, 0, 0.668);
-    background-color: #17335aaf;
+    background-color: #17335ad2;
   }
   & .cta-container {
     color: white;
@@ -25,21 +24,22 @@
       font-size: 2rem;
       // color: $gold--light;
       font-weight: 500;
-      text-shadow: 1px 1px 4px black;
+      text-shadow: 1px 1px 4px $blue;
     }
     & p {
       line-height: 1.3;
       margin-bottom: 0.8rem;
-      text-shadow: 1px 1px 4px black;
+      text-shadow: 1px 1px 4px $blue;
     }
     & a {
       display: inline-block;
-      margin-top: 0.3rem;
+      margin-top: 0.6rem;
       padding: 1rem 2rem;
       background-color: $gold;
       border: 1px solid $gold;
       transition: 0.3s;
       text-transform: uppercase;
+      font-size: 0.9rem;
       &:hover {
         background: transparent;
         color: $gold;
