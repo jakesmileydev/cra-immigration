@@ -1,4 +1,5 @@
 import logo from "../images/cra-transparent.png";
+import darkLogo from "../images/cra-dark.png";
 
 import { MdCall } from "react-icons/md";
 import { MdLocationPin } from "react-icons/md";
@@ -12,7 +13,7 @@ export default function Footer() {
   return (
     <footer id="footer">
       <div className="footer-logo">
-        <img src={logo} alt="CRA immigration logo" />
+        <img src={darkLogo} alt="CRA immigration logo" />
         <div className="footer-socials">
           <a
             href="https://www.facebook.com/craimmigration"

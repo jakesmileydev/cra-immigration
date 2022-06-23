@@ -1,5 +1,6 @@
 #footer {
   background-color: $blue;
+  background-color: black;
   padding: 3rem 0 6rem 0;
   display: flex;
   justify-content: space-evenly;
@@ -9,18 +10,18 @@
     transition: 0.2s;
   }
   & a:hover {
-    color: $gold;
+    color: $altgold;
   }
   & .footer-logo {
     & img {
-      width: 14rem;
+      width: 16rem;
     }
   }
   & h5 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     font-weight: 500;
-    color: $gold;
+    color: $altgold;
   }
   & .hours {
     & p:nth-child(even) {
@@ -50,7 +51,7 @@
     gap: 1rem;
     margin-top: 1rem;
     font-size: 2.2rem;
-    color: $gold;
+    color: $altgold;
 
     & a {
       height: 3rem;
@@ -63,7 +64,7 @@
       //   border: 3px solid $gold;
       transition: 0.2s;
       &:hover {
-        color: $gold;
+        color: $altgold;
         opacity: 0.6;
       }
     }

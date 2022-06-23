@@ -10,8 +10,8 @@
     height: 100%;
     top: 0;
     left: 0;
-    // background-color: rgba(0, 0, 0, 0.668);
-    background-color: #17335ad2;
+    background-color: rgba(0, 0, 0, 0.705);
+    // background-color: #17335ad2;
   }
   & .cta-container {
     color: white;
@@ -30,6 +30,7 @@
       line-height: 1.3;
       margin-bottom: 0.8rem;
       text-shadow: 1px 1px 4px $blue;
+      text-shadow: 1px 1px 4px black;
     }
     & a {
       display: inline-block;

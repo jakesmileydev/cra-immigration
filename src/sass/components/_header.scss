@@ -14,8 +14,13 @@
 .logo {
   // padding: 1.6rem 1rem;
   & img {
-    width: 12rem;
-    padding: 0.6rem;
+    // regular logo styles
+    // ......................
+    // width: 12rem;
+    // padding: 0.6rem;
+    // ......................
+
+    width: 20rem;
     margin-left: 1rem;
   }
 }

@@ -1,10 +1,10 @@
 import logo from "../images/cra-transparent.png";
-
+import darkLogo from "../images/cra-dark.png";
 export default function Header() {
   return (
     <header className="header">
       <div className="logo">
-        <img src={logo} alt="Crocker Russell and Associates logo"></img>
+        <img src={darkLogo} alt="Crocker Russell and Associates logo"></img>
       </div>
       <nav className="nav">
         <ul>
