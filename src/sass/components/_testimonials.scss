@@ -1,0 +1,13 @@
+#testimonials {
+  & .reviews {
+    display: flex;
+    // gap: 2rem;
+  }
+  & .review {
+    padding: 1rem;
+    & .quotes {
+      color: $gold;
+      font-family: "Times New Roman", Times, serif;
+    }
+  }
+}

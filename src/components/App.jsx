@@ -1,4 +1,3 @@
-import Header from "./Header";
 import Contact from "./Contact";
 import About from "./About";
 import Testimonials from "./Testimonials";
@@ -8,6 +7,7 @@ import Footer from "./Footer";
 import Awards from "./Awards";
 import Services from "./Services";
 import Hero from "./Hero";
+import Header from "./Header";
 
 import "../style.css";
 

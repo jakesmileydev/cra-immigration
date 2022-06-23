@@ -2,18 +2,25 @@
   display: flex;
   justify-content: space-between;
   // background-color: rgb(0, 0, 0);
-  // position: fixed;
-  color: black;
+
+  color: white;
   align-items: center;
+
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  width: 100%;
 }
 .logo {
-  padding: 1.6rem 1rem;
-  font-size: 1.2rem;
-  & span {
-    color: $gold;
+  // padding: 1.6rem 1rem;
+  & img {
+    width: 12rem;
+    padding: 0.6rem;
+    margin-left: 1rem;
   }
 }
 .nav {
+  margin-right: 1rem;
   & ul {
     display: flex;
   }

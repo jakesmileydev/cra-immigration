@@ -1,18 +1,23 @@
 .header {
   display: flex;
   justify-content: space-between;
-  color: black;
+  color: white;
   align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  width: 100%;
 }
 
-.logo {
-  padding: 1.6rem 1rem;
-  font-size: 1.2rem;
-}
-.logo span {
-  color: #b69754;
+.logo img {
+  width: 12rem;
+  padding: 0.6rem;
+  margin-left: 1rem;
 }
 
+.nav {
+  margin-right: 1rem;
+}
 .nav ul {
   display: flex;
 }
@@ -52,7 +57,7 @@
 
 #hero {
   width: 100%;
-  height: 40rem;
+  height: 100vh;
   background-position: center;
   background-size: cover;
   background-image: url(./images/hero.jpg);
@@ -70,10 +75,24 @@
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: rgba(0, 0, 0, 0.757);
+  background-color: rgba(23, 51, 90, 0.6862745098);
 }
 #hero .overlay .hero-text {
   padding: 2rem;
+}
+#hero .overlay .hero-text a {
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  background-color: #b69754;
+  color: white;
+  border: 1px solid #b69754;
+  margin-left: 3px;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+#hero .overlay .hero-text a:hover {
+  background-color: transparent;
+  color: #b69754;
 }
 #hero .overlay h1 {
   font-size: 6rem;
@@ -89,20 +108,6 @@
 #hero .overlay p {
   margin-bottom: 2.8rem;
   margin-left: 3px;
-}
-#hero .overlay a {
-  text-transform: uppercase;
-  padding: 1rem 2rem;
-  background-color: #b69754;
-  color: white;
-  border: 1px solid #b69754;
-  margin-left: 3px;
-  font-size: 0.9rem;
-  transition: 0.2s;
-}
-#hero .overlay a:hover {
-  background-color: transparent;
-  color: #b69754;
 }
 
 .awards {
@@ -156,7 +161,7 @@
 
 #cta {
   max-width: 100%;
-  background-image: url("./images/cta-background.jpg");
+  background-image: url("./images/cta.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -168,7 +173,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.668);
+  background-color: rgba(23, 51, 90, 0.6862745098);
 }
 #cta .cta-container {
   color: white;
@@ -203,6 +208,17 @@
 }
 #cta .cta-container strong {
   color: #c2a870;
+}
+
+#testimonials .reviews {
+  display: flex;
+}
+#testimonials .review {
+  padding: 1rem;
+}
+#testimonials .review .quotes {
+  color: #b69754;
+  font-family: "Times New Roman", Times, serif;
 }
 
 body {

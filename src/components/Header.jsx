@@ -1,10 +1,10 @@
-import logo from "../images/cra-immigration-logo-cropped.png";
+import logo from "../images/cra-transparent.png";
 
 export default function Header() {
   return (
     <header className="header">
       <div className="logo">
-        CRA <span>immigration</span>
+        <img src={logo} alt="Crocker Russell and Associates logo"></img>
       </div>
       <nav className="nav">
         <ul>
