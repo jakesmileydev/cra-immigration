@@ -9,7 +9,8 @@ export default function Header() {
       <nav className="nav">
         <ul>
           <li>
-            <a href="#home">Home</a>
+            {/* eslint-disable-next-line */}
+            <a href="#">Home</a>
           </li>
           <li>
             <a href="#about">About</a>

@@ -1,17 +1,75 @@
 #footer {
   background-color: $blue;
-  padding: 3rem 6rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  //   justify-items: center;
+  padding: 3rem 0 6rem 0;
+  display: flex;
+  justify-content: space-evenly;
   color: white;
+  position: relative;
+  & a {
+    transition: 0.2s;
+  }
+  & a:hover {
+    color: $gold;
+  }
   & .footer-logo {
     & img {
-      width: 60%;
+      width: 14rem;
     }
   }
   & h5 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
+    font-weight: 500;
+    color: $gold;
+  }
+  & .hours {
+    & p:nth-child(even) {
+      margin-bottom: 0.8rem;
+      //   font-style: italic;
+    }
+    & p:nth-child(odd) {
+      margin-bottom: 0.2rem;
+    }
+  }
+  & .footer-links {
+    & ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+  }
+  & .contact a {
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 2.2rem;
+    color: $gold;
+
+    & a {
+      height: 3rem;
+      width: 3rem;
+      //   padding: 0.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      //   border-radius: 50%;
+      //   border: 3px solid $gold;
+      transition: 0.2s;
+      &:hover {
+        color: $gold;
+        opacity: 0.6;
+      }
+    }
+  }
+  & .copy {
+    position: absolute;
+    bottom: 1rem;
   }
 }

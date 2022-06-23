@@ -123,7 +123,6 @@
 .awards ul {
   display: flex;
   justify-content: space-around;
-  filter: grayscale(1);
 }
 
 #services {
@@ -369,17 +368,67 @@
 
 #footer {
   background-color: #17335a;
-  padding: 3rem 6rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 3rem 0 6rem 0;
+  display: flex;
+  justify-content: space-evenly;
   color: white;
+  position: relative;
+}
+#footer a {
+  transition: 0.2s;
+}
+#footer a:hover {
+  color: #b69754;
 }
 #footer .footer-logo img {
-  width: 60%;
+  width: 14rem;
 }
 #footer h5 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  font-weight: 500;
+  color: #b69754;
+}
+#footer .hours p:nth-child(even) {
+  margin-bottom: 0.8rem;
+}
+#footer .hours p:nth-child(odd) {
+  margin-bottom: 0.2rem;
+}
+#footer .footer-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+#footer .contact a {
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+#footer .footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 2.2rem;
+  color: #b69754;
+}
+#footer .footer-socials a {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+#footer .footer-socials a:hover {
+  color: #b69754;
+  opacity: 0.6;
+}
+#footer .copy {
+  position: absolute;
+  bottom: 1rem;
 }
 
 html {
