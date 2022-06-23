@@ -1,0 +1,27 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+button {
+  cursor: pointer;
+}
+a {
+  cursor: pointer;
+}
+section {
+  max-width: 60rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  padding: 2rem;
+}
+.section-header {
+  border-left: 5px solid $gold;
+  padding-left: 0.6rem;
+  margin-bottom: 2rem;
+  & p {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 0.2rem;
+  }
+  & h2 {
+  }
+}

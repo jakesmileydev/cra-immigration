@@ -1,0 +1,9 @@
+.awards {
+  max-width: 100%;
+  padding: 1rem;
+  & ul {
+    display: flex;
+    justify-content: space-around;
+    // filter: grayscale(200%) saturate(0%);
+  }
+}
