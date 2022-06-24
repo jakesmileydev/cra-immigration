@@ -4,6 +4,17 @@
   & .team-cards {
     display: flex;
     justify-content: space-between;
+    @include max-900 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    @include max-700 {
+      gap: 1rem;
+    }
+    @include max-440 {
+      grid-template-columns: 1fr;
+    }
   }
   & .card-image {
     width: 100%;
@@ -16,6 +27,12 @@
 
   .card {
     width: 23%;
+    @include max-900 {
+      width: 100%;
+    }
+    @include max-440 {
+      padding: 1rem;
+    }
     & .card-text {
       padding: 1rem;
       background-color: $gold;

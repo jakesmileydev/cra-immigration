@@ -24,7 +24,11 @@ export default function About() {
           "We'll Lawyer the shit out of those motherfuckers!"
         </div>
         {/* <div className="about-signature"></div> */}
-        <img src={signature} className="about-signature" />
+        <img
+          src={signature}
+          className="about-signature"
+          alt="ali crocker russell signature"
+        />
       </div>
       <div className="about-image"></div>
     </section>

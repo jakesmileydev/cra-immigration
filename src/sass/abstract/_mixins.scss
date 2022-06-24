@@ -3,6 +3,12 @@
     @content;
   }
 }
+@mixin max-440 {
+  @media (max-width: 27.5em) {
+    @content;
+  }
+}
+
 @mixin max-600 {
   @media (max-width: 37.5em) {
     @content;
@@ -16,6 +22,11 @@
 
 @mixin max-900 {
   @media (max-width: 56.25em) {
+    @content;
+  }
+}
+@mixin max-1000 {
+  @media (max-width: 62.5em) {
     @content;
   }
 }

@@ -1,4 +1,6 @@
-import logo from "../images/cra-transparent.png";
+import React from "react";
+
+// import logo from "../images/cra-transparent.png";
 import darkLogo from "../images/cra-dark.png";
 
 import { MdCall } from "react-icons/md";
@@ -8,8 +10,26 @@ import { MdMail } from "react-icons/md";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { CgChevronUp } from "react-icons/cg";
 
 export default function Footer() {
+  const [buttonOpen, setButtonOpen] = React.useState({
+    hoursButton: false,
+    contactButton: false,
+    linksButton: false,
+  });
+
+  const handleClick = function (e) {
+    const button = e.target.classList[0];
+    setButtonOpen((prevState) => {
+      const newState = {
+        ...prevState,
+        [button]: !prevState[button],
+      };
+      console.log(newState);
+      return newState;
+    });
+  };
   return (
     <footer id="footer">
       <div className="footer-logo">
@@ -38,8 +58,11 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <div className="hours">
-        <h5>Business Hours</h5>
+      <div className={`hours ${buttonOpen.hoursButton ? "open" : ""}`}>
+        <h5 className="hoursButton" onClick={handleClick}>
+          Hours
+          <CgChevronUp className="arrow" />
+        </h5>
         <div>
           <p>Monday - Friday:</p>
           <p> 8:30am - 5:30pm</p>
@@ -47,8 +70,11 @@ export default function Footer() {
           <p>Closed</p>
         </div>
       </div>
-      <div className="contact">
-        <h5>Contact Us</h5>
+      <div className={`contact ${buttonOpen.contactButton ? "open" : ""}`}>
+        <h5 className="contactButton" onClick={handleClick}>
+          Contact
+          <CgChevronUp className="arrow" />
+        </h5>
         <ul>
           <li>
             <a href="tel:18006666">
@@ -74,8 +100,11 @@ export default function Footer() {
           </li>
         </ul>
       </div>
-      <nav className="footer-links">
-        <h5>Links</h5>
+      <nav className={`footer-links ${buttonOpen.linksButton ? "open" : ""}`}>
+        <h5 className="linksButton" onClick={handleClick}>
+          Links
+          <CgChevronUp className="arrow" />
+        </h5>
         <ul>
           <li>
             {/* eslint-disable-next-line */}

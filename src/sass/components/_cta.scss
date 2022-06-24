@@ -14,6 +14,9 @@
     // background-color: #17335ad2;
   }
   & .cta-container {
+    @include max-440 {
+      padding: 2rem 1rem;
+    }
     color: white;
     padding: 2rem;
     max-width: 60rem;

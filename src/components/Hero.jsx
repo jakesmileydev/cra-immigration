@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 export default function Hero() {
   return (
     <section id="hero">
@@ -10,7 +12,9 @@ export default function Hero() {
             this difficult time.
             <br></br>
           </p>
-          <a href="#contact">Free Consultation</a>
+          <Link to="contact" smooth={true} offset={-85} duration={850}>
+            Free Consultation
+          </Link>
         </div>
       </div>
     </section>

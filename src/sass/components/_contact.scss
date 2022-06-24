@@ -17,6 +17,12 @@
     max-width: 70rem;
     padding: 4rem 4rem 4.6rem 4rem;
     color: white;
+    @include max-700 {
+      padding: 2rem 2rem 2.6rem 2rem;
+    }
+    @include max-440 {
+      padding: 1rem;
+    }
   }
   & .section-header {
     & p {
@@ -31,12 +37,19 @@
     color: $text--dark;
     background-color: white;
     padding: 2rem;
+    @include max-440 {
+      padding: 1rem;
+    }
     & label {
       margin-bottom: 0.2rem;
     }
     & .form-row {
       display: flex;
       gap: 2rem;
+      @include max-700 {
+        flex-direction: column;
+        gap: 1rem;
+      }
       & div {
         display: flex;
         flex-direction: column;
@@ -72,6 +85,9 @@
       color: white;
       transition: 0.3s;
       text-transform: uppercase;
+      @include max-700 {
+        width: 100%;
+      }
       &:hover {
         background-color: transparent;
         color: $gold;

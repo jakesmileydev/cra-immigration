@@ -3,8 +3,14 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   padding-top: 0;
+  @include max-900 {
+    grid-template-columns: 1fr;
+  }
 
   & .services-text {
+    @include max-900 {
+      grid-row: 1;
+    }
     padding: 1rem;
     & > p {
       color: #666;
@@ -19,6 +25,9 @@
     gap: 1rem;
     // align-items: center;
     justify-items: center;
+    @include max-440 {
+      padding: 0;
+    }
     & .service {
       padding: 2rem 1rem 2.6rem 1rem;
       text-align: center;

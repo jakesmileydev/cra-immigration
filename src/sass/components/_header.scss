@@ -1,15 +1,19 @@
 .header {
   display: flex;
   justify-content: space-between;
-  // background-color: rgb(0, 0, 0);
 
   color: white;
   align-items: center;
 
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 100;
   width: 100%;
+  background-color: transparent;
+  transition: 0.5s ease;
+}
+.header-bg {
+  background-color: rgba(0, 0, 0, 0.918);
 }
 .logo {
   // padding: 1.6rem 1rem;
@@ -20,21 +24,50 @@
     // padding: 0.6rem;
     // ......................
 
-    width: 20rem;
+    width: 16rem;
+    width: 13rem;
     margin-left: 1rem;
+    @include max-600 {
+      margin-left: 0;
+    }
   }
 }
 .nav {
   margin-right: 1rem;
+  transition: all 0.3s;
+  @include max-1000 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 2rem;
+    height: 100vh;
+    background-color: white;
+    color: black;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    transform: translateX(100%);
+    &.nav--open {
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.387);
+      transform: translateX(0);
+    }
+  }
   & ul {
     display: flex;
+    @include max-1000 {
+      // justify-self: center;
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
   & a {
     font-size: 1.2rem;
     padding: 0.6rem;
     margin-right: 1rem;
     transition: 0.2s;
-
+    @include max-1000 {
+      font-size: 1.6rem;
+    }
     &:hover {
       color: $gold;
     }

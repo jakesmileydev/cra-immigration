@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 export default function CTA() {
   return (
     <section id="cta">
@@ -12,7 +14,9 @@ export default function CTA() {
             Studies show that you are 10 times more likely to lawfully remain in
             the United States with proper legal representation.
           </p>
-          <a href="#contact">Free Case Review</a>
+          <Link to="contact" smooth={true} offset={-85} duration={850}>
+            Free Case Review
+          </Link>
         </div>
       </div>
     </section>
