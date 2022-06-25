@@ -553,11 +553,11 @@
 }
 
 #footer {
-  background-color: #17335a;
   background-color: black;
-  padding: 3rem 0 6rem 0;
-  display: flex;
-  justify-content: space-evenly;
+  padding: 3rem;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   color: white;
   position: relative;
 }
@@ -576,7 +576,7 @@
 }
 @media (max-width: 56.25em) {
   #footer .footer-logo {
-    grid-column: 1/4;
+    grid-column: 1/5;
     justify-self: center;
     margin-bottom: 2rem;
   }
@@ -590,7 +590,7 @@
   gap: 1rem;
   margin-top: 1rem;
   font-size: 2.2rem;
-  color: #c2a870;
+  color: white;
 }
 #footer .footer-logo .footer-socials a {
   height: 3rem;
@@ -602,7 +602,6 @@
 }
 #footer .footer-logo .footer-socials a:hover {
   color: #c2a870;
-  opacity: 0.6;
 }
 #footer h5 {
   font-size: 1.2rem;
@@ -628,10 +627,17 @@
   gap: 0.4rem;
 }
 #footer .copy {
-  grid-column: 1/4;
+  grid-column: 1/5;
+  grid-row: 3;
   bottom: 1rem;
   text-align: center;
-  padding: 2rem 2rem 2rem 2rem;
+  padding: 4rem 2rem 0 2rem;
+}
+@media (max-width: 43.75em) {
+  #footer .copy {
+    grid-row: 5;
+    padding-bottom: 2rem;
+  }
 }
 #footer a {
   transition: 0.2s;
@@ -653,10 +659,15 @@
     justify-self: flex-start;
   }
   #footer .hours h5, #footer .contact h5, #footer .footer-links h5 {
+    color: white;
     padding-bottom: 0.2rem;
     font-size: 1.3rem;
-    border-bottom: 1px solid #b69754;
+    border-bottom: 1px solid white;
     cursor: pointer;
+  }
+  #footer .hours h5:hover, #footer .contact h5:hover, #footer .footer-links h5:hover {
+    color: #c2a870;
+    border-bottom: 1px solid #c2a870;
   }
   #footer .hours.open div {
     transition: max-height 0.3s ease, opacity 0.5s;
@@ -665,19 +676,19 @@
     max-height: 16rem;
   }
   #footer .contact.open ul, #footer .footer-links.open ul {
-    transition: max-height 0.3s ease, opacity 0.5s;
+    transition: max-height 0.3s ease, opacity 0.5s ease;
     opacity: 1;
     visibility: visible;
     max-height: 16rem;
   }
   #footer .hours.open .arrow, #footer .contact.open .arrow, #footer .footer-links.open .arrow {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
   }
   #footer .hours div, #footer .contact ul, #footer .footer-links ul {
     max-height: 0;
     visibility: hidden;
     opacity: 0;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
+    transition: max-height 0.3s ease, opacity 0.5s ease;
   }
   #footer .arrow {
     position: absolute;

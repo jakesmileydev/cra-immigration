@@ -1,9 +1,9 @@
 #footer {
-  background-color: $blue;
   background-color: black;
-  padding: 3rem 0 6rem 0;
-  display: flex;
-  justify-content: space-evenly;
+  padding: 3rem;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   color: white;
   position: relative;
   @include max-900 {
@@ -17,7 +17,7 @@
   }
   & .footer-logo {
     @include max-900 {
-      grid-column: 1 / 4;
+      grid-column: 1 / 5;
       justify-self: center;
       margin-bottom: 2rem;
     }
@@ -30,7 +30,7 @@
       gap: 1rem;
       margin-top: 1rem;
       font-size: 2.2rem;
-      color: $altgold;
+      color: white;
 
       & a {
         height: 3rem;
@@ -44,7 +44,6 @@
         transition: 0.2s;
         &:hover {
           color: $altgold;
-          opacity: 0.6;
         }
       }
     }
@@ -79,10 +78,15 @@
     gap: 0.4rem;
   }
   & .copy {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
+    grid-row: 3;
     bottom: 1rem;
     text-align: center;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 4rem 2rem 0 2rem;
+    @include max-700 {
+      grid-row: 5;
+      padding-bottom: 2rem;
+    }
   }
   & a {
     transition: 0.2s;
@@ -106,10 +110,15 @@
       margin-bottom: 0.4rem;
       justify-self: flex-start;
       & h5 {
+        color: white;
         padding-bottom: 0.2rem;
         font-size: 1.3rem;
-        border-bottom: 1px solid $gold;
+        border-bottom: 1px solid white;
         cursor: pointer;
+        &:hover {
+          color: $altgold;
+          border-bottom: 1px solid $altgold;
+        }
       }
     }
     & .hours.open {
@@ -123,7 +132,7 @@
     & .contact.open,
     & .footer-links.open {
       & ul {
-        transition: max-height 0.3s ease, opacity 0.5s;
+        transition: max-height 0.3s ease, opacity 0.5s ease;
         opacity: 1;
         visibility: visible;
         max-height: 16rem;
@@ -133,7 +142,7 @@
     & .contact.open,
     & .footer-links.open {
       & .arrow {
-        transform: rotate(180deg);
+        transform: rotate(-180deg);
       }
     }
 
@@ -143,7 +152,7 @@
       max-height: 0;
       visibility: hidden;
       opacity: 0;
-      transition: max-height 0.3s ease, opacity 0.3s ease;
+      transition: max-height 0.3s ease, opacity 0.5s ease;
     }
     & .arrow {
       position: absolute;

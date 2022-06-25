@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 // import logo from "../images/cra-transparent.png";
 import darkLogo from "../images/cra-dark.png";
@@ -93,10 +94,10 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="mailto:micala@cralawfirm.com">
+            <Link to="contact" smooth={true} offset={-85}>
               <MdMail />
               @cralawfirm.com
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -108,19 +109,29 @@ export default function Footer() {
         <ul>
           <li>
             {/* eslint-disable-next-line */}
-            <a href="#">Home</a>
+            <Link to="hero" smooth={true} duration={850}>
+              Home
+            </Link>
           </li>
           <li>
-            <a href="#about">About</a>
+            <Link to="about" smooth={true} offset={-85} duration={850}>
+              About
+            </Link>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <Link to="services" smooth={true} offset={-85} duration={850}>
+              Services
+            </Link>
           </li>
           <li>
-            <a href="#testimonials">Testimonials</a>
+            <Link to="testimonials" smooth={true} offset={-85} duration={850}>
+              Testimonials
+            </Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link to="contact" smooth={true} offset={-85} duration={850}>
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
