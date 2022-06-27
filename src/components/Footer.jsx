@@ -37,6 +37,7 @@ export default function Footer() {
         <img src={darkLogo} alt="CRA immigration logo" />
         <div className="footer-socials">
           <a
+            aria-label="facebook"
             href="https://www.facebook.com/craimmigration"
             target="_blank"
             rel="noreferrer"
@@ -44,6 +45,7 @@ export default function Footer() {
             <FaFacebook className="social-icon" />
           </a>
           <a
+            aria-label="instagram"
             href="https://www.instagram.com/craimmigration"
             target="_blank"
             rel="noreferrer"
@@ -51,6 +53,7 @@ export default function Footer() {
             <FaInstagram className="social-icon" />
           </a>
           <a
+            aria-label="twitter"
             href="https://www.twitter.com/craimmigration"
             target="_blank"
             rel="noreferrer"
@@ -60,10 +63,10 @@ export default function Footer() {
         </div>
       </div>
       <div className={`hours ${buttonOpen.hoursButton ? "open" : ""}`}>
-        <h5 className="hoursButton" onClick={handleClick}>
+        <p className="hoursButton footer-title" onClick={handleClick}>
           Hours
           <CgChevronUp className="arrow" />
-        </h5>
+        </p>
         <div>
           <p>Monday - Friday:</p>
           <p> 8:30am - 5:30pm</p>
@@ -72,10 +75,10 @@ export default function Footer() {
         </div>
       </div>
       <div className={`contact ${buttonOpen.contactButton ? "open" : ""}`}>
-        <h5 className="contactButton" onClick={handleClick}>
+        <p className="contactButton footer-title" onClick={handleClick}>
           Contact
           <CgChevronUp className="arrow" />
-        </h5>
+        </p>
         <ul>
           <li>
             <a href="tel:18006666">
@@ -94,7 +97,7 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <Link to="contact" smooth={true} offset={-85}>
+            <Link to="contact" href="#contact" smooth={true} offset={-85}>
               <MdMail />
               @cralawfirm.com
             </Link>
@@ -102,34 +105,58 @@ export default function Footer() {
         </ul>
       </div>
       <nav className={`footer-links ${buttonOpen.linksButton ? "open" : ""}`}>
-        <h5 className="linksButton" onClick={handleClick}>
+        <p className="linksButton footer-title" onClick={handleClick}>
           Links
           <CgChevronUp className="arrow" />
-        </h5>
+        </p>
         <ul>
           <li>
             {/* eslint-disable-next-line */}
-            <Link to="hero" smooth={true} duration={850}>
+            <Link to="hero" href="#home" smooth={true} duration={850}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="about" smooth={true} offset={-85} duration={850}>
+            <Link
+              to="about"
+              href="#about"
+              smooth={true}
+              offset={-85}
+              duration={850}
+            >
               About
             </Link>
           </li>
           <li>
-            <Link to="services" smooth={true} offset={-85} duration={850}>
+            <Link
+              to="services"
+              href="#services"
+              smooth={true}
+              offset={-85}
+              duration={850}
+            >
               Services
             </Link>
           </li>
           <li>
-            <Link to="testimonials" smooth={true} offset={-85} duration={850}>
+            <Link
+              to="testimonials"
+              href="#testimonials"
+              smooth={true}
+              offset={-85}
+              duration={850}
+            >
               Testimonials
             </Link>
           </li>
           <li>
-            <Link to="contact" smooth={true} offset={-85} duration={850}>
+            <Link
+              to="contact"
+              href="#contact"
+              smooth={true}
+              offset={-85}
+              duration={850}
+            >
               Contact
             </Link>
           </li>

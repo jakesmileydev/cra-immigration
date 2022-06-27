@@ -11,12 +11,6 @@
   width: 100%;
   background-color: transparent;
   transition: 0.5s ease;
-}
-.header-bg {
-  background-color: rgba(0, 0, 0, 0.918);
-}
-.logo {
-  // padding: 1.6rem 1rem;
   & img {
     // regular logo styles
     // ......................
@@ -32,6 +26,12 @@
     }
   }
 }
+.header-bg {
+  background-color: rgba(0, 0, 0, 0.918);
+}
+
+// padding: 1.6rem 1rem;
+
 .nav {
   margin-right: 1rem;
   transition: all 0.3s;
@@ -63,13 +63,37 @@
   & a {
     font-size: 1.2rem;
     padding: 0.6rem;
-    margin-right: 1rem;
+    margin-right: 1.4rem;
     transition: 0.2s;
     @include max-1000 {
       font-size: 1.6rem;
+      // color: black;
     }
-    &:hover {
-      color: $gold;
-    }
+    // &:hover {
+    //   color: $gold;
+    // }
+  }
+  & .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    // color: white;
+  }
+
+  & .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $altgold;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  & .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 }

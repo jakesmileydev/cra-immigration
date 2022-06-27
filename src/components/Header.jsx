@@ -19,14 +19,15 @@ export default function Header() {
   window.addEventListener("scroll", changeColor);
   return (
     <header className={`header ${color ? "header-bg" : ""}`}>
-      <Link to="hero" smooth={true} duration={850} className="logo">
-        <img src={darkLogo} alt="Crocker Russell and Associates logo"></img>
-      </Link>
+      <img src={darkLogo} alt="Crocker Russell and Associates logo"></img>
+
       <nav className={`nav ${isMobileOpen ? "nav--open" : ""}`}>
         <ul>
           <li>
             {/* eslint-disable-next-line */}
             <Link
+              href="#home"
+              className="hover-underline-animation"
               to="hero"
               smooth={true}
               duration={850}
@@ -37,6 +38,8 @@ export default function Header() {
           </li>
           <li>
             <Link
+              href="#home"
+              className="hover-underline-animation"
               to="about"
               smooth={true}
               offset={-85}
@@ -48,6 +51,8 @@ export default function Header() {
           </li>
           <li>
             <Link
+              href="#home"
+              className="hover-underline-animation"
               to="services"
               smooth={true}
               offset={-85}
@@ -59,6 +64,8 @@ export default function Header() {
           </li>
           <li>
             <Link
+              href="#home"
+              className="hover-underline-animation"
               to="testimonials"
               smooth={true}
               offset={-85}
@@ -70,6 +77,8 @@ export default function Header() {
           </li>
           <li>
             <Link
+              href="#home"
+              className="hover-underline-animation"
               to="contact"
               smooth={true}
               offset={-85}
@@ -81,6 +90,8 @@ export default function Header() {
           </li>
           <li>
             <Link
+              href="#home"
+              className="hover-underline-animation"
               to="team"
               smooth={true}
               offset={-85}
@@ -92,7 +103,11 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <button className="mobile-nav-btn-wrapper" onClick={toggleMobileNav}>
+      <button
+        className="mobile-nav-btn-wrapper"
+        aria-label="mobile navigation"
+        onClick={toggleMobileNav}
+      >
         <div
           className={`mobile-nav-btn ${
             isMobileOpen ? "mobile-nav-btn--open" : ""

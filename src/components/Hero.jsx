@@ -12,7 +12,13 @@ export default function Hero() {
             this difficult time.
             <br></br>
           </p>
-          <Link to="contact" smooth={true} offset={-85} duration={850}>
+          <Link
+            href="#contact"
+            to="contact"
+            smooth={true}
+            offset={-85}
+            duration={850}
+          >
             Free Consultation
           </Link>
         </div>
