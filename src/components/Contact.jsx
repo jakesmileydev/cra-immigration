@@ -7,9 +7,10 @@ export default function Contact() {
             <p>Se Habla Español</p>
             <h2>Free Consultation</h2>
           </header>
-          <form>
+          <form name="contact-form" method="POST" data-netlify="true">
             <div className="form-row">
               <div>
+                <input type="hidden" name="form-name" value="contact-form" />
                 <label htmlFor="firstName">First Name</label>
                 <input
                   type="text"
