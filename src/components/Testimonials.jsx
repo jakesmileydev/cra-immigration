@@ -35,6 +35,8 @@ export default function Testimonials() {
       </header>
       <div className="reviews">
         <Swiper
+          speed={700}
+          spaceBetween={100}
           modules={[Navigation, Pagination]}
           navigation={true}
           pagination={{ clickable: true }}

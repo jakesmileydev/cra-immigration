@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 
 // import logo from "../images/cra-transparent.png";
-import darkLogo from "../images/cra-dark.png";
+import logo from "../images/cra-again.png";
 
 export default function Header() {
   const [isMobileOpen, setIsMobileOpen] = React.useState(false);
@@ -19,7 +19,7 @@ export default function Header() {
   window.addEventListener("scroll", changeColor);
   return (
     <header className={`header ${color ? "header-bg" : ""}`}>
-      <img src={darkLogo} alt="Crocker Russell and Associates logo"></img>
+      <img src={logo} alt="Crocker Russell and Associates logo"></img>
 
       <nav className={`nav ${isMobileOpen ? "nav--open" : ""}`}>
         <ul>

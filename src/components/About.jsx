@@ -21,7 +21,8 @@ export default function About() {
           elit.
         </p>
         <div className="about-quote">
-          "We'll Lawyer the shit out of those motherfuckers!"
+          "Our objective is to provide every client with the best representation
+          possible so you can get the results you desire."
         </div>
         {/* <div className="about-signature"></div> */}
         <img

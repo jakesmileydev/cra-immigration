@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-scroll";
 
 // import logo from "../images/cra-transparent.png";
-import darkLogo from "../images/cra-dark.png";
+import logo from "../images/cra-again.png";
 
 import { MdCall } from "react-icons/md";
 import { MdLocationPin } from "react-icons/md";
 import { MdMail } from "react-icons/md";
 
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { CgChevronUp } from "react-icons/cg";
@@ -34,7 +34,7 @@ export default function Footer() {
   return (
     <footer id="footer">
       <div className="footer-logo">
-        <img src={darkLogo} alt="CRA immigration logo" />
+        <img src={logo} alt="CRA immigration logo" />
         <div className="footer-socials">
           <a
             aria-label="facebook"
@@ -42,7 +42,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <FaFacebook className="social-icon" />
+            <FaFacebookF className="social-icon" />
           </a>
           <a
             aria-label="instagram"

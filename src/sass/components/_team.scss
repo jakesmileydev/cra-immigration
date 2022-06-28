@@ -4,7 +4,12 @@
   & .team-cards {
     display: flex;
     justify-content: space-between;
-    @include max-900 {
+    gap: 2rem;
+    // @include max-1000 {
+    //   gap: 1rem;
+    // }
+
+    @include max-1120 {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
@@ -16,47 +21,141 @@
       grid-template-columns: 1fr;
     }
   }
-  & .card-image {
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    padding-top: 130%;
+  & .team-card {
     position: relative;
     overflow: hidden;
-  }
 
-  .card {
-    width: 23%;
-    @include max-900 {
+    &:hover {
+      & .card-shape {
+        // transition-delay: 0.5s;
+
+        bottom: 0;
+      }
+      & .card-shape::before {
+        // transition-delay: 0;
+        bottom: 0;
+      }
+      & .card-name {
+        left: 4%;
+      }
+      & .card-title {
+        left: 4%;
+      }
+    }
+    & .card-image {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-    @include max-440 {
-      padding: 1rem;
+    & .card-shape {
+      background-color: white;
+      z-index: 1;
+      width: 101%;
+      height: 100%;
+      -webkit-clip-path: polygon(0 60%, 100% 85%, 100% 100%, 0% 100%);
+      clip-path: polygon(0 60%, 100% 85%, 100% 100%, 0% 100%);
+      position: absolute;
+      bottom: -100%;
+      opacity: 0.9;
+      left: 0;
+      transition: all 0.3s ease-in-out;
     }
-    & .card-text {
-      padding: 1rem;
+    & .card-shape::before {
+      content: "";
       background-color: $gold;
-      color: $text--dark;
+      width: 101%;
+      height: 100%;
+      -webkit-clip-path: polygon(0 65%, 100% 90%, 100% 100%, 0% 100%);
+      clip-path: polygon(0 65%, 100% 90%, 100% 100%, 0% 100%);
+      position: absolute;
+      bottom: -100%;
+      opacity: 0.9;
+
+      left: 0;
+      z-index: 2;
+      opacity: 0.9;
+
+      // transform: translateY(200px);
+      transition: all 0.3s ease-in-out;
+      transition-delay: 0.1s;
     }
     & .card-name {
-      font-size: 1.1rem;
-      font-weight: bold;
+      position: absolute;
+      bottom: 10%;
+      left: -200%;
+      font-size: 1.2rem;
+      color: $text--dark;
+      font-weight: 500;
+      z-index: 3;
+      transition: all 0.7s ease;
     }
     & .card-title {
+      position: absolute;
+      left: -200%;
+
+      bottom: 5%;
       font-style: italic;
-      margin-top: 0.2rem;
+      z-index: 3;
+      color: $text--dark;
+      transition: all 0.7s ease;
+      // transition-delay: 0.2s;
+    }
+    @include max-1120 {
+      & .card-shape {
+        bottom: 0;
+        &::before {
+          bottom: 0;
+        }
+      }
+      & .card-title {
+        left: 4%;
+      }
+      & .card-name {
+        left: 4%;
+      }
     }
   }
-  & .card-one .card-image {
-    background-image: url(./images/team.jpg);
-  }
-  & .card-two .card-image {
-    background-image: url(./images/team-2.jpg);
-  }
-  & .card-three .card-image {
-    background-image: url(./images/team-3.jpg);
-  }
-  & .card-four .card-image {
-    background-image: url(./images/team-4.jpg);
-  }
+  // & .card-image {
+  //   width: 100%;
+  //   background-position: center;
+  //   background-size: cover;
+  //   padding-top: 130%;
+  //   position: relative;
+  //   overflow: hidden;
+  // }
+
+  // .card {
+  //   width: 23%;
+  //   @include max-900 {
+  //     width: 100%;
+  //   }
+  //   @include max-440 {
+  //     padding: 1rem;
+  //   }
+  //   & .card-text {
+  //     padding: 1rem;
+  //     background-color: $gold;
+  //     color: $text--dark;
+  //   }
+  //   & .card-name {
+  //     font-size: 1.1rem;
+  //     font-weight: bold;
+  //   }
+  //   & .card-title {
+  //     font-style: italic;
+  //     margin-top: 0.2rem;
+  //   }
+  // }
+  // & .card-one .card-image {
+  //   background-image: url(./images/team.jpg);
+  // }
+  // & .card-two .card-image {
+  //   background-image: url(./images/team-2.jpg);
+  // }
+  // & .card-three .card-image {
+  //   background-image: url(./images/team-3.jpg);
+  // }
+  // & .card-four .card-image {
+  //   background-image: url(./images/team-4.jpg);
+  // }
 }
