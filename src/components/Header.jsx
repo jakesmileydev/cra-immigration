@@ -56,11 +56,11 @@ export default function Header(props) {
           </li>
           <li>
             <Link
-              to="/blog"
+              to="/media"
               className="hover-underline-animation"
               onClick={() => setIsMobileOpen(false)}
             >
-              Blog
+              Media
             </Link>
           </li>
           <li>

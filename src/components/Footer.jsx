@@ -99,7 +99,7 @@ export default function Footer() {
           <li>
             <Link to="/contact">
               <MdMail />
-              contact@cralawfirm.com
+              email@cralawfirm.com
             </Link>
           </li>
         </ul>

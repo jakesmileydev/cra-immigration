@@ -3,9 +3,9 @@ import { Routes, Route, useLocation } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
-import Blog from "./pages/Blog";
+import Blog from "./pages/Media";
+import Team from "./pages/Team";
 
-import Team from "./components/Team";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
@@ -20,7 +20,7 @@ export default function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/team" element={<Team />} />
-        <Route exact path="/blog" element={<Blog />} />
+        <Route exact path="/media" element={<Blog />} />
       </Routes>
 
       <Footer />

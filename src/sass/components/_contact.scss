@@ -2,35 +2,73 @@
   max-width: 100%;
   padding: 0;
   justify-self: center;
-  & .banner {
-    width: 100%;
-    height: 20rem;
-    background-image: url("./images/contact.jpg");
-    background-size: cover;
-    background-position: center;
+
+  & h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: $text--dark;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    font-style: italic;
   }
-  & .banner-overlay {
+  & .contact-icons-container {
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.668);
+
     display: flex;
     justify-content: center;
-    align-items: center;
-    & h1 {
-      color: white;
-      font-weight: 500;
-      text-transform: uppercase;
-      border: 3px solid white;
-      padding: 1rem;
-      letter-spacing: 3px;
+    & .contact-icons {
+      max-width: 50rem;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr 1fr;
+      padding: 2rem 2rem 0 2rem;
+      // gap: 4rem;
+      & div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 1rem;
+        color: $gold;
+      }
+      & div:nth-child(2) {
+        padding: 1rem 1.6rem;
+        border-left: 3px solid $gold;
+        border-right: 3px solid $gold;
+      }
+      & .icon {
+        font-size: 2.2rem;
+        margin-bottom: 0.6rem;
+      }
+      & .icon-title {
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      & .icon-value {
+        color: $text--dark;
+        text-align: center;
+      }
     }
   }
   & .contact-container {
     margin: 0 auto;
     max-width: 70rem;
     padding: 4rem 4rem 4.6rem 4rem;
+    // display: grid;
+    // grid-template-columns: 1fr 2fr;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    & .contact-description {
+      & p {
+        font-size: 1.1rem;
+        color: $text--dark;
+        margin-bottom: 1rem;
+        line-height: 1.3;
+      }
+      & a {
+        font-weight: 500;
+      }
+    }
     @include max-700 {
       padding: 2rem 2rem 2.6rem 2rem;
     }
@@ -42,15 +80,16 @@
     & p {
       color: $gold;
     }
-    & h2 {
+    & h3 {
       color: $text--dark;
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
   }
   & form {
     color: $text--dark;
     background-color: white;
-    box-shadow: 0 0 7px black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.373);
+    border-radius: 4px;
     padding: 2rem;
     @include max-440 {
       padding: 1rem;

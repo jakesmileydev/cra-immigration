@@ -1,9 +1,11 @@
 .header {
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  top: 0;
+  background: transparent;
   color: white;
   align-items: center;
-  background-color: black;
   top: 0;
   z-index: 100;
   width: 100%;
@@ -12,12 +14,7 @@
 .header img {
   width: 16rem;
   width: 13rem;
-  margin-left: 1rem;
-}
-@media (max-width: 37.5em) {
-  .header img {
-    margin-left: 0;
-  }
+  padding: 0.6rem;
 }
 
 .nav {
@@ -436,35 +433,66 @@
   padding: 0;
   justify-self: center;
 }
-#contact .banner {
-  width: 100%;
-  height: 20rem;
-  background-image: url("./images/contact.jpg");
-  background-size: cover;
-  background-position: center;
+#contact h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c2c2c;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-style: italic;
 }
-#contact .banner-overlay {
+#contact .contact-icons-container {
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.668);
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-#contact .banner-overlay h1 {
-  color: white;
-  font-weight: 500;
-  text-transform: uppercase;
-  border: 3px solid white;
+#contact .contact-icons-container .contact-icons {
+  max-width: 50rem;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  padding: 2rem 2rem 0 2rem;
+}
+#contact .contact-icons-container .contact-icons div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
   padding: 1rem;
-  letter-spacing: 3px;
+  color: #b69754;
+}
+#contact .contact-icons-container .contact-icons div:nth-child(2) {
+  padding: 1rem 1.6rem;
+  border-left: 3px solid #b69754;
+  border-right: 3px solid #b69754;
+}
+#contact .contact-icons-container .contact-icons .icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.6rem;
+}
+#contact .contact-icons-container .contact-icons .icon-title {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+#contact .contact-icons-container .contact-icons .icon-value {
+  color: #2c2c2c;
+  text-align: center;
 }
 #contact .contact-container {
   margin: 0 auto;
   max-width: 70rem;
   padding: 4rem 4rem 4.6rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#contact .contact-container .contact-description p {
+  font-size: 1.1rem;
+  color: #2c2c2c;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+#contact .contact-container .contact-description a {
+  font-weight: 500;
 }
 @media (max-width: 43.75em) {
   #contact .contact-container {
@@ -479,14 +507,15 @@
 #contact .section-header p {
   color: #b69754;
 }
-#contact .section-header h2 {
+#contact .section-header h3 {
   color: #2c2c2c;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 #contact form {
   color: #2c2c2c;
   background-color: white;
-  box-shadow: 0 0 7px black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.373);
+  border-radius: 4px;
   padding: 2rem;
 }
 @media (max-width: 27.5em) {
@@ -551,113 +580,75 @@
   color: #b69754;
 }
 
-#team {
-  max-width: 80rem;
+#team .team-one {
+  grid-template-columns: 1.2fr 1fr;
 }
-#team .team-cards {
+#team .team-two {
+  grid-template-columns: 1fr 1.2fr;
+}
+#team .team {
+  display: grid;
+  align-items: center;
+  margin-bottom: 0;
+}
+@media (max-width: 56.25em) {
+  #team .team {
+    display: flex;
+    flex-direction: column;
+  }
+}
+#team .team .team-socials {
   display: flex;
-  justify-content: space-between;
-  gap: 2rem;
+  color: #b69754;
+  cursor: pointer;
+  font-size: 1.3rem;
+  margin-top: 0.6rem;
+  gap: 1.4rem;
 }
-@media (max-width: 70em) {
-  #team .team-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
+#team .team .team-socials li {
+  transition: 0.2s ease;
 }
-@media (max-width: 43.75em) {
-  #team .team-cards {
-    gap: 1rem;
-  }
+#team .team .team-socials li:hover {
+  transform: translateY(-2px);
+}
+#team .team .team-text {
+  padding: 2rem;
 }
 @media (max-width: 27.5em) {
-  #team .team-cards {
-    grid-template-columns: 1fr;
+  #team .team .team-text {
+    padding: 1rem;
   }
 }
-#team .team-card {
-  position: relative;
-  overflow: hidden;
+#team .team .team-text > p {
+  margin-bottom: 2rem;
+  line-height: 1.3;
+  color: #666;
 }
-#team .team-card:hover .card-shape {
-  bottom: 0;
+#team .team .team-image {
+  margin: 2rem;
+  padding-top: 115%;
+  background-size: cover;
+  background-position: 50% 50%;
 }
-#team .team-card:hover .card-shape::before {
-  bottom: 0;
+@media (max-width: 56.25em) {
+  #team .team .team-image {
+    width: 90%;
+  }
 }
-#team .team-card:hover .card-name {
-  left: 4%;
-}
-#team .team-card:hover .card-title {
-  left: 4%;
-}
-#team .team-card .card-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-#team .team-card .card-shape {
-  background-color: white;
-  z-index: 1;
-  width: 101%;
-  height: 100%;
-  -webkit-clip-path: polygon(0 60%, 100% 85%, 100% 100%, 0% 100%);
-  clip-path: polygon(0 60%, 100% 85%, 100% 100%, 0% 100%);
-  position: absolute;
-  bottom: -100%;
-  opacity: 0.9;
-  left: 0;
-  transition: all 0.3s ease-in-out;
-}
-#team .team-card .card-shape::before {
-  content: "";
-  background-color: #b69754;
-  width: 101%;
-  height: 100%;
-  -webkit-clip-path: polygon(0 65%, 100% 90%, 100% 100%, 0% 100%);
-  clip-path: polygon(0 65%, 100% 90%, 100% 100%, 0% 100%);
-  position: absolute;
-  bottom: -100%;
-  opacity: 0.9;
-  left: 0;
-  z-index: 2;
-  opacity: 0.9;
-  transition: all 0.3s ease-in-out;
-  transition-delay: 0.1s;
-}
-#team .team-card .card-name {
-  position: absolute;
-  bottom: 10%;
-  left: -200%;
-  font-size: 1.2rem;
-  color: #2c2c2c;
-  font-weight: 500;
-  z-index: 3;
-  transition: all 0.7s ease;
-}
-#team .team-card .card-title {
-  position: absolute;
-  left: -200%;
-  bottom: 5%;
+#team .team .team-quote {
+  color: #b69754;
+  font-size: 1.1rem;
   font-style: italic;
-  z-index: 3;
-  color: #2c2c2c;
-  transition: all 0.7s ease;
+  margin-bottom: 1rem;
 }
-@media (max-width: 70em) {
-  #team .team-card .card-shape {
-    bottom: 0;
-  }
-  #team .team-card .card-shape::before {
-    bottom: 0;
-  }
-  #team .team-card .card-title {
-    left: 4%;
-  }
-  #team .team-card .card-name {
-    left: 4%;
-  }
+#team .team .team-signature {
+  width: 60%;
+}
+#team .team-one .team-image {
+  background-image: url(./images/team-3.jpg);
+}
+#team .team-two .team-image {
+  background-image: url(./images/team-4.jpg);
 }
 
 #footer {
@@ -665,7 +656,7 @@
   padding: 3rem;
   display: grid;
   justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 0.8fr;
   color: white;
   position: relative;
 }
@@ -690,7 +681,7 @@
   }
 }
 #footer .footer-logo img {
-  width: 16rem;
+  width: 14rem;
 }
 #footer .footer-logo .footer-socials {
   display: flex;
@@ -698,10 +689,9 @@
   gap: 1rem;
   margin-top: 1rem;
   color: #b69754;
-  font-size: 2.2rem;
 }
 #footer .footer-logo .footer-socials a {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   padding: 0.6rem;
   display: flex;
   justify-content: center;
@@ -715,7 +705,7 @@
 }
 #footer .footer-title {
   font-size: 1.2rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.6rem;
   font-weight: 500;
   display: inline-block;
   border-bottom: 1px solid white;
@@ -735,6 +725,14 @@
 }
 #footer .hours div p:nth-child(odd) {
   margin-bottom: 0.2rem;
+}
+#footer .footer-links {
+  padding-right: 3rem;
+}
+@media (max-width: 56.25em) {
+  #footer .footer-links {
+    padding-right: 0;
+  }
 }
 #footer .footer-links ul {
   display: flex;
@@ -907,6 +905,16 @@ html {
   }
 }
 
+.leaflet-container {
+  width: 100%;
+  height: 20rem;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -969,6 +977,33 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.banner {
+  width: 100%;
+  height: 24rem;
+  background-image: url("./images/banners/contact-banner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-overlay {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.686);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-overlay h1 {
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 3px solid white;
+  padding: 1rem;
+  letter-spacing: 3px;
 }
 
 /*# sourceMappingURL=style.css.map */

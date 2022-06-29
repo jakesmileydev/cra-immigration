@@ -3,7 +3,7 @@
   padding: 3rem;
   display: grid;
   justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 0.8fr;
   color: white;
   position: relative;
   // height: 380px;
@@ -26,7 +26,7 @@
       margin-bottom: 2rem;
     }
     & img {
-      width: 16rem;
+      width: 14rem;
     }
     & .footer-socials {
       display: flex;
@@ -34,14 +34,14 @@
       gap: 1rem;
       margin-top: 1rem;
       color: $gold;
-      font-size: 2.2rem;
+      // font-size: 1rem;
 
       & a {
         // height: 2rem;
         // width: 2rem;
         //   padding: 0.2rem;
 
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         padding: 0.6rem;
         display: flex;
         justify-content: center;
@@ -61,11 +61,11 @@
   }
   & .footer-title {
     font-size: 1.2rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.6rem;
     font-weight: 500;
     display: inline-block;
     border-bottom: 1px solid white;
-    // color: $altgold;
+
     @include max-900 {
       display: block;
     }
@@ -84,6 +84,10 @@
     }
   }
   & .footer-links {
+    padding-right: 3rem;
+    @include max-900 {
+      padding-right: 0;
+    }
     & ul {
       display: flex;
       flex-direction: column;
