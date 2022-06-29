@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { CgChevronDown } from "react-icons/cg";
+
 // import logo from "../images/cra-transparent.png";
 import logo from "../images/cra-again.png";
 
@@ -9,6 +11,11 @@ export default function Header(props) {
   const [isMobileOpen, setIsMobileOpen] = React.useState(false);
   const toggleMobileNav = function () {
     setIsMobileOpen(!isMobileOpen);
+  };
+
+  const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
+  const toggleDropdown = function () {
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   // change nav color from transparent to black after scrolling
@@ -36,13 +43,28 @@ export default function Header(props) {
           </li>
 
           <li>
-            <Link
+            <button
               to="/"
-              className="hover-underline-animation"
-              onClick={() => setIsMobileOpen(false)}
+              className=" practice-areas-link"
+              onClick={toggleDropdown}
             >
-              Services
-            </Link>
+              Practice Areas
+              <CgChevronDown className="practice-areas-link-icon" />
+            </button>
+            <ul
+              className={`practice-areas-dropdown ${
+                isDropdownOpen ? "dropdown-open" : ""
+              }`}
+            >
+              <li>
+                <Link to="/visa" className="hover-underline-animation">
+                  Visa
+                </Link>
+              </li>
+              <li>Green Card</li>
+              <li>Deportation Defense</li>
+              <li>Citenzship</li>
+            </ul>
           </li>
 
           <li>

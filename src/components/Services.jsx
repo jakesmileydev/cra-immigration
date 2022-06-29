@@ -30,7 +30,7 @@ export default function Services() {
       </div>
       <div className="services-text">
         <div className="section-header">
-          <p>Services</p>
+          <p>Practice Areas</p>
           <h2>How we can help</h2>
         </div>
         <p>

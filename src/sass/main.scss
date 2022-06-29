@@ -5,14 +5,15 @@
 @import "components/about";
 @import "components/hero";
 @import "components/awards";
-@import "components/services";
 @import "components/cta";
 @import "components/testimonials";
-@import "components/contact";
-@import "components/team";
 @import "components/footer";
 @import "components/mobile";
 
 @import "general/general";
 @import "general/reset";
 @import "general/banner";
+
+@import "pages/services";
+@import "pages/team";
+@import "pages/contact";
