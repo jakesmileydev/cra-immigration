@@ -1,4 +1,4 @@
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 export default function CTA() {
   return (
@@ -14,15 +14,7 @@ export default function CTA() {
             Studies show that you are 10 times more likely to lawfully remain in
             the United States with proper legal representation.
           </p>
-          <Link
-            href="#contact"
-            to="contact"
-            smooth={true}
-            offset={-85}
-            duration={850}
-          >
-            Free Case Review
-          </Link>
+          <Link to="/contact">Free Case Review</Link>
         </div>
       </div>
     </section>

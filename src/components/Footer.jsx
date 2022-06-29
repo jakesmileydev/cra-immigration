@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 // import logo from "../images/cra-transparent.png";
 import logo from "../images/cra-again.png";
@@ -97,9 +97,9 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <Link to="contact" href="#contact" smooth={true} offset={-85}>
+            <Link to="/contact">
               <MdMail />
-              @cralawfirm.com
+              contact@cralawfirm.com
             </Link>
           </li>
         </ul>
@@ -112,53 +112,17 @@ export default function Footer() {
         <ul>
           <li>
             {/* eslint-disable-next-line */}
-            <Link to="hero" href="#home" smooth={true} duration={850}>
-              Home
-            </Link>
+            <Link to="/">Home</Link>
+          </li>
+
+          <li>
+            <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <Link
-              to="about"
-              href="#about"
-              smooth={true}
-              offset={-85}
-              duration={850}
-            >
-              About
-            </Link>
+            <Link to="/blog">Blog</Link>
           </li>
           <li>
-            <Link
-              to="services"
-              href="#services"
-              smooth={true}
-              offset={-85}
-              duration={850}
-            >
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="testimonials"
-              href="#testimonials"
-              smooth={true}
-              offset={-85}
-              duration={850}
-            >
-              Testimonials
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="contact"
-              href="#contact"
-              smooth={true}
-              offset={-85}
-              duration={850}
-            >
-              Contact
-            </Link>
+            <Link to="/team">Team</Link>
           </li>
         </ul>
       </nav>

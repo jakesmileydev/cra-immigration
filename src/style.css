@@ -3,11 +3,10 @@
   justify-content: space-between;
   color: white;
   align-items: center;
-  position: fixed;
+  background-color: black;
   top: 0;
   z-index: 100;
   width: 100%;
-  background-color: transparent;
   transition: 0.5s ease;
 }
 .header img {
@@ -19,10 +18,6 @@
   .header img {
     margin-left: 0;
   }
-}
-
-.header-bg {
-  background-color: rgba(0, 0, 0, 0.918);
 }
 
 .nav {
@@ -201,6 +196,7 @@
 }
 
 .awards {
+  width: 100%;
   max-width: 100%;
   padding: 1rem;
 }
@@ -295,6 +291,7 @@
 }
 
 #cta {
+  width: 100%;
   max-width: 100%;
   background-image: url("./images/cta.jpg");
   background-size: cover;
@@ -368,6 +365,7 @@
 }
 
 #testimonials {
+  width: 100%;
   padding: 4rem;
 }
 #testimonials .stars {
@@ -435,23 +433,38 @@
 
 #contact {
   max-width: 100%;
+  padding: 0;
+  justify-self: center;
+}
+#contact .banner {
+  width: 100%;
+  height: 20rem;
   background-image: url("./images/contact.jpg");
   background-size: cover;
   background-position: center;
-  padding: 0;
 }
-#contact .contact-overlay {
+#contact .banner-overlay {
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.668);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact .banner-overlay h1 {
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 3px solid white;
+  padding: 1rem;
+  letter-spacing: 3px;
 }
 #contact .contact-container {
   margin: 0 auto;
   max-width: 70rem;
   padding: 4rem 4rem 4.6rem 4rem;
-  color: white;
 }
 @media (max-width: 43.75em) {
   #contact .contact-container {
@@ -467,12 +480,13 @@
   color: #b69754;
 }
 #contact .section-header h2 {
-  color: white;
+  color: #2c2c2c;
   font-size: 2rem;
 }
 #contact form {
   color: #2c2c2c;
   background-color: white;
+  box-shadow: 0 0 7px black;
   padding: 2rem;
 }
 @media (max-width: 27.5em) {
@@ -788,7 +802,7 @@
   }
   #footer .contact.open ul, #footer .footer-links.open ul {
     transition: height 0.5s ease;
-    height: 160px;
+    height: 130px;
   }
   #footer .contact.open ul {
     transition: height 0.5s ease;
@@ -895,6 +909,16 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 button {

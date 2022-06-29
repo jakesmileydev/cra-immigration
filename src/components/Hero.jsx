@@ -1,4 +1,4 @@
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -12,15 +12,7 @@ export default function Hero() {
             this difficult time.
             <br></br>
           </p>
-          <Link
-            href="#contact"
-            to="contact"
-            smooth={true}
-            offset={-85}
-            duration={850}
-          >
-            Free Consultation
-          </Link>
+          <Link to="/contact">Free Consultation</Link>
         </div>
       </div>
     </section>
