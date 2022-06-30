@@ -13,82 +13,78 @@ export default function Header(props) {
     setIsMobileOpen(!isMobileOpen);
   };
 
-  const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
-  const toggleDropdown = function () {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
-  // change nav color from transparent to black after scrolling
-  // const [color, setColor] = React.useState(false);
-  // const changeColor = () => {
-  //   if (window.scrollY >= 85) setColor(true);
-  //   else setColor(false);
-  // };
-  // window.addEventListener("scroll", changeColor);
   return (
     <header className={`header`}>
       <img src={logo} alt="Crocker Russell and Associates logo"></img>
 
       <nav className={`nav ${isMobileOpen ? "nav--open" : ""}`}>
-        <ul>
-          <li>
-            {/* eslint-disable-next-line */}
+        <ul className="nav__menu">
+          <li className="nav__menu-item">
             <Link
               to="/"
-              className="hover-underline-animation"
+              className="nav__menu-item__link hover-underline-animation"
               onClick={() => setIsMobileOpen(false)}
             >
               Home
             </Link>
           </li>
 
-          <li>
-            <button
-              to="/"
-              className=" practice-areas-link"
-              onClick={toggleDropdown}
-            >
-              Practice Areas
-              <CgChevronDown className="practice-areas-link-icon" />
-            </button>
-            <ul
-              className={`practice-areas-dropdown ${
-                isDropdownOpen ? "dropdown-open" : ""
-              }`}
-            >
-              <li>
-                <Link to="/visa" className="hover-underline-animation">
-                  Visa
-                </Link>
-              </li>
-              <li>Green Card</li>
-              <li>Deportation Defense</li>
-              <li>Citenzship</li>
-            </ul>
-          </li>
-
-          <li>
+          <li className="nav__menu-item">
             <Link
               to="/contact"
-              className="hover-underline-animation"
+              className="nav__menu-item__link hover-underline-animation"
               onClick={() => setIsMobileOpen(false)}
             >
               Contact
             </Link>
           </li>
-          <li>
+          <li className="nav__menu-item">
             <Link
               to="/media"
-              className="hover-underline-animation"
+              className="nav__menu-item__link hover-underline-animation"
               onClick={() => setIsMobileOpen(false)}
             >
               Media
             </Link>
           </li>
-          <li>
+          <li className="nav__menu-item">
+            <button className="nav__menu-item__dropdown-button">
+              Practice Areas
+              <CgChevronDown className="dropdown-button__arrow" />
+            </button>
+
+            {/* ------- Dropdown for practice areas ------- */}
+            <ul
+              className="nav__dropdown"
+              // onMouseOut={}
+            >
+              <li>
+                <Link className="nav__dropdown-link" to="/visa">
+                  Visa
+                </Link>
+              </li>
+              <li>
+                <Link className="nav__dropdown-link" to="/green-card">
+                  Green Card
+                </Link>
+              </li>
+              <li>
+                <Link className="nav__dropdown-link" to="/deportation-defense">
+                  Deportation Defense
+                </Link>
+              </li>
+              <li>
+                <Link className="nav__dropdown-link" to="/citizenship">
+                  Citizenship
+                </Link>
+              </li>
+            </ul>
+          </li>
+          {/* ------- End Dropdown ------- */}
+          <li className="nav__menu-item">
             <Link
               to="/team"
-              className="hover-underline-animation"
+              className="nav__menu-item__link hover-underline-animation"
               onClick={() => setIsMobileOpen(false)}
             >
               Team
@@ -96,14 +92,16 @@ export default function Header(props) {
           </li>
         </ul>
       </nav>
+
+      {/* ------- Mobile Navigation ------- */}
       <button
-        className="mobile-nav-btn-wrapper"
+        className="nav__mobile-button"
         aria-label="mobile navigation"
         onClick={toggleMobileNav}
       >
         <div
-          className={`mobile-nav-btn ${
-            isMobileOpen ? "mobile-nav-btn--open" : ""
+          className={`nav__mobile-button__hamburger ${
+            isMobileOpen ? "nav__mobile-button__hamburger-open" : ""
           }`}
         >
           <span></span>

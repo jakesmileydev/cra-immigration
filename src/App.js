@@ -21,6 +21,8 @@ export default function App() {
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/team" element={<Team />} />
         <Route exact path="/media" element={<Blog />} />
+        {/* Default Route for wrong pathname */}
+        <Route path="/*" element={<Home />} />
       </Routes>
 
       <Footer />

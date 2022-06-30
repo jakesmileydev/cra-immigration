@@ -1,5 +1,5 @@
 /* MOBILE NAVIGATION */
-.mobile-nav-btn-wrapper {
+.nav__mobile-button {
   height: 100%;
   cursor: pointer;
   background: none;
@@ -16,7 +16,7 @@
   }
 }
 
-.mobile-nav-btn {
+.nav__mobile-button__hamburger {
   width: 2.2rem;
   height: 1.7rem;
   position: relative;
@@ -25,7 +25,7 @@
   transition: 0.5s ease-in-out;
 }
 
-.mobile-nav-btn span {
+.nav__mobile-button__hamburger span {
   display: block;
   position: absolute;
   height: 2px;
@@ -36,34 +36,37 @@
   transform: rotate(0deg);
   transition: 0.25s ease-in-out;
 }
-.mobile-nav-btn.mobile-nav-btn--open span {
+.nav__mobile-button__hamburger.nav__mobile-button__hamburger-open span {
   background: black;
 }
 
-.mobile-nav-btn span:nth-child(1) {
+.nav__mobile-button__hamburger span:nth-child(1) {
   top: 0;
 }
 
-.mobile-nav-btn span:nth-child(2) {
+.nav__mobile-button__hamburger span:nth-child(2) {
   top: 10px;
 }
 
-.mobile-nav-btn span:nth-child(3) {
+.nav__mobile-button__hamburger span:nth-child(3) {
   top: 20px;
 }
 
-.mobile-nav-btn.mobile-nav-btn--open span:nth-child(1) {
+.nav__mobile-button__hamburger.nav__mobile-button__hamburger-open
+  span:nth-child(1) {
   height: 2px;
   top: 10px;
   transform: rotate(135deg);
 }
 
-.mobile-nav-btn.mobile-nav-btn--open span:nth-child(2) {
+.nav__mobile-button__hamburger.nav__mobile-button__hamburger-open
+  span:nth-child(2) {
   opacity: 0;
   left: -110%;
 }
 
-.mobile-nav-btn.mobile-nav-btn--open span:nth-child(3) {
+.nav__mobile-button__hamburger.nav__mobile-button__hamburger-open
+  span:nth-child(3) {
   height: 2px;
   top: 10px;
   transform: rotate(-135deg);
