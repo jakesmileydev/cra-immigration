@@ -1,4 +1,12 @@
 #services {
+  max-width: 70rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 2rem;
+  @include max-700 {
+    padding: 1rem;
+  }
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;

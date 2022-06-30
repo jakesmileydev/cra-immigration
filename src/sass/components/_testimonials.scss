@@ -14,6 +14,13 @@
 }
 
 #testimonials {
+  max-width: 70rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  padding: 2rem;
+  @include max-700 {
+    padding: 1rem;
+  }
   width: 100%;
   & .stars {
     width: 10rem;

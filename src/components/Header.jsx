@@ -12,6 +12,10 @@ export default function Header(props) {
   const toggleMobileNav = function () {
     setIsMobileOpen(!isMobileOpen);
   };
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = React.useState(false);
+  const toggleMobileDropdown = function () {
+    setIsMobileDropdownOpen(!isMobileDropdownOpen);
+  };
 
   return (
     <header className={`header`}>
@@ -48,33 +52,54 @@ export default function Header(props) {
             </Link>
           </li>
           <li className="nav__menu-item">
-            <button className="nav__menu-item__dropdown-button">
+            <button
+              className="nav__menu-item__dropdown-button"
+              onClick={toggleMobileDropdown}
+            >
               Practice Areas
               <CgChevronDown className="dropdown-button__arrow" />
             </button>
 
             {/* ------- Dropdown for practice areas ------- */}
             <ul
-              className="nav__dropdown"
+              className={`nav__dropdown ${
+                isMobileDropdownOpen ? "mobile-dropdown__open" : ""
+              }`}
               // onMouseOut={}
             >
               <li>
-                <Link className="nav__dropdown-link" to="/visa">
+                <Link
+                  className="nav__dropdown-link"
+                  to="/visa"
+                  onClick={toggleMobileNav}
+                >
                   Visa
                 </Link>
               </li>
               <li>
-                <Link className="nav__dropdown-link" to="/green-card">
+                <Link
+                  className="nav__dropdown-link"
+                  to="/green-card"
+                  onClick={toggleMobileNav}
+                >
                   Green Card
                 </Link>
               </li>
               <li>
-                <Link className="nav__dropdown-link" to="/deportation-defense">
+                <Link
+                  className="nav__dropdown-link"
+                  to="/deportation-defense"
+                  onClick={toggleMobileNav}
+                >
                   Deportation Defense
                 </Link>
               </li>
               <li>
-                <Link className="nav__dropdown-link" to="/citizenship">
+                <Link
+                  className="nav__dropdown-link"
+                  to="/citizenship"
+                  onClick={toggleMobileNav}
+                >
                   Citizenship
                 </Link>
               </li>

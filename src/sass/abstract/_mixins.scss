@@ -30,6 +30,11 @@
     @content;
   }
 }
+@mixin min-1000 {
+  @media (min-width: 62.5em) {
+    @content;
+  }
+}
 
 @mixin max-1120 {
   @media (max-width: 70em) {

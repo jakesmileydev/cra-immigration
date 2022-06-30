@@ -30,8 +30,8 @@ export default function Services() {
       </div>
       <div className="services-text">
         <div className="section-header">
-          <p>Practice Areas</p>
-          <h2>How we can help</h2>
+          <p>Immigration Services</p>
+          <h2>Areas of Practice</h2>
         </div>
         <p>
           If you or a loved one does not have any legal status in the United

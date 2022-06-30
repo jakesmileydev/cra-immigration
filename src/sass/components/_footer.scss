@@ -152,7 +152,7 @@
     }
     & .hours.open {
       & div {
-        transition: height 0.5s ease;
+        transition: height 0.3s ease;
 
         height: 140px;
       }
@@ -160,14 +160,14 @@
     & .contact.open,
     & .footer-links.open {
       & ul {
-        transition: height 0.5s ease;
+        transition: height 0.3s ease;
 
         height: 130px;
       }
     }
     & .contact.open {
       & ul {
-        transition: height 0.5s ease;
+        transition: height 0.3s ease;
 
         height: 130px;
       }
@@ -185,12 +185,12 @@
     & .footer-links ul {
       height: 0;
       overflow: hidden;
-      transition: height 0.7s;
+      transition: height 0.3s;
     }
     & .arrow {
       position: absolute;
       transform: rotate(0);
-      transition: transform 0.5s ease;
+      transition: transform 0.3s ease;
       right: 2.2rem;
     }
   }
