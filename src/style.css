@@ -22,7 +22,7 @@
   gap: 3rem;
 }
 .nav__menu .nav__menu-item {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.854);
 }
 .nav__menu .nav__menu-item .nav__menu-item__link {
@@ -36,7 +36,7 @@
 }
 .nav__menu .nav__menu-item .nav__menu-item__dropdown-button {
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.854);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding: 0.4rem;
   display: flex;
   align-items: center;
@@ -64,7 +64,7 @@
   flex-direction: column;
   position: absolute;
   gap: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 .nav__menu .nav__dropdown li {
   margin-top: 1rem;
@@ -857,6 +857,10 @@ button {
   letter-spacing: 3px;
 }
 
+#team {
+  max-width: 70rem;
+  margin: 0 auto;
+}
 #team .team {
   display: grid;
   align-items: center;

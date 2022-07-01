@@ -61,7 +61,12 @@ export default function Contact() {
             </p>
           </div>
         </div>
-        <form name="contact-form" method="POST" data-netlify="true">
+        <form
+          name="contact-form"
+          method="POST"
+          data-netlify="true"
+          action="/success"
+        >
           <div className="form-row">
             <div>
               <input type="hidden" name="form-name" value="contact-form" />
@@ -100,6 +105,7 @@ export default function Contact() {
           </div>
           <label htmlFor="message">How can we help?</label>
           <textarea id="message" name="message"></textarea>
+
           <button>Send Message</button>
         </form>
       </div>

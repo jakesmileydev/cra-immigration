@@ -31,7 +31,12 @@ export default function DeportationDefense() {
               <Link to="/citizenship">Citizenship</Link>
             </li>
           </ul>
-          <form name="contact-form" method="POST" data-netlify="true">
+          <form
+            name="contact-form"
+            method="POST"
+            data-netlify="true"
+            action="/success"
+          >
             <div className="form-row">
               <div>
                 <input type="hidden" name="form-name" value="contact-form" />

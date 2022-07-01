@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Media from "./pages/Media";
 import Team from "./pages/Team";
+import Success from "./pages/Success";
+
 import Citizenship from "./pages/practice-areas/Citizenship";
 import DeportationDefense from "./pages/practice-areas/DeportationDefense";
 import GreenCard from "./pages/practice-areas/GreenCard";
@@ -24,6 +26,7 @@ export default function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/success" element={<Success />} />
         <Route exact path="/team" element={<Team />} />
         <Route exact path="/media" element={<Media />} />
         <Route exact path="/green-card" element={<GreenCard />} />
