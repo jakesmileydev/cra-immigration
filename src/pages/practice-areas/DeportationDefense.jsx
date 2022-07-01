@@ -36,9 +36,7 @@ export default function DeportationDefense() {
             action="/success"
             method="POST"
             data-netlify="true"
-            onSubmit={(e) => {
-              e.preventDefault();
-            }}
+            onSubmit="submit"
           >
             <div className="form-row">
               <div>
