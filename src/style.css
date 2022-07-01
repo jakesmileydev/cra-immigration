@@ -366,6 +366,7 @@
   max-width: 70rem;
   margin: 0 auto;
   margin-bottom: 4rem;
+  margin-top: 4rem;
   padding: 2rem;
   width: 100%;
   padding: 4rem;
@@ -1085,6 +1086,13 @@ button {
 #contact form button:hover {
   background-color: transparent;
   color: #b69754;
+}
+
+.practice-area {
+  max-width: 70rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 }
 
 /*# sourceMappingURL=style.css.map */

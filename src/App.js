@@ -20,6 +20,7 @@ export default function App() {
   return (
     <>
       <Header location={location} />
+
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/contact" element={<Contact />} />
