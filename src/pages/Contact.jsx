@@ -65,7 +65,7 @@ export default function Contact() {
           name="contact-form"
           method="POST"
           data-netlify="true"
-          action="/success/"
+          action="/success"
         >
           <div className="form-row">
             <div>
