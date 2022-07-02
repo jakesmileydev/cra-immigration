@@ -1,13 +1,29 @@
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-
+import { motion } from "framer-motion";
 export default function Team() {
   return (
     <>
       <div className="banner">
         <div className="banner-overlay">
-          <h1>Team</h1>
+          <motion.h1
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              opacity: {
+                ease: "linear",
+                duration: 0.5,
+              },
+              x: {
+                ease: "easeOut",
+                duration: 0.4,
+              },
+            }}
+            exit={{ opacity: 0, transition: { duration: 0.3 } }}
+          >
+            Team
+          </motion.h1>
         </div>
       </div>
       <main id="team">

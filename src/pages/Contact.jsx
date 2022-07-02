@@ -1,13 +1,29 @@
 import { FaMobileAlt } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { MdMailOutline } from "react-icons/md";
-
+import { motion } from "framer-motion";
 export default function Contact() {
   return (
     <main id="contact">
       <div className="banner">
         <div className="banner-overlay">
-          <h1>Contact Us</h1>
+          <motion.h1
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              opacity: {
+                ease: "linear",
+                duration: 0.5,
+              },
+              x: {
+                ease: "easeOut",
+                duration: 0.4,
+              },
+            }}
+            exit={{ opacity: 0, transition: { duration: 0.3 } }}
+          >
+            Contact Us
+          </motion.h1>
         </div>
       </div>
       <h2>Crocker Russell & Associates Immigration</h2>

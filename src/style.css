@@ -1094,9 +1094,92 @@ button {
 
 .practice-area {
   max-width: 70rem;
+  width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2.4fr 1fr;
+  padding: 1rem;
+}
+.practice-area section {
+  padding: 1rem;
+  padding-right: 4rem;
+}
+.practice-area .practice-area__paragraph {
+  line-height: 1.4;
+  margin-bottom: 1.6rem;
+  color: #666;
+  font-weight: normal;
+}
+.practice-area aside {
+  padding: 1rem;
+}
+.practice-area .services-container {
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.375);
+  padding: 1.4rem;
+  border-radius: 3px;
+}
+.practice-area .services-container ul li {
+  margin-top: 0.6rem;
+}
+.practice-area .services-container ul li a {
+  display: flex;
+  align-items: center;
+  transition: 0.2s ease;
+}
+@media (hover: hover) {
+  .practice-area .services-container ul li a:hover {
+    color: #b69754;
+  }
+}
+.practice-area .form-container {
+  margin-top: 2rem;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.375);
+  padding: 1.4rem;
+  border-radius: 3px;
+}
+.practice-area form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.practice-area form textarea {
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+  resize: none;
+  padding: 0.36rem;
+  width: 100%;
+  height: 6rem;
+  font-family: "Roboto", sans-serif;
+}
+.practice-area form textarea, .practice-area form input {
+  margin-bottom: 0.6rem;
+  padding: 0.45rem;
+  font-size: 1rem;
+  color: #2c2c2c;
+  border: 1px solid #888;
+  border-radius: 2px;
+}
+.practice-area form textarea:focus, .practice-area form input:focus {
+  outline: 3px solid #b69754;
+  border: 1px solid transparent;
+}
+.practice-area form button {
+  margin-top: 0.4rem;
+  padding: 1rem 2rem;
+  background-color: #b69754;
+  border: 1px solid #b69754;
+  color: white;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+@media (max-width: 43.75em) {
+  .practice-area form button {
+    width: 100%;
+  }
+}
+.practice-area form button:hover {
+  background-color: transparent;
+  color: #b69754;
 }
 
 /*# sourceMappingURL=style.css.map */
