@@ -5,6 +5,7 @@ import { Navigation, Pagination } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { motion } from "framer-motion";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -28,7 +29,22 @@ import "swiper/css/scrollbar";
 
 export default function Testimonials() {
   return (
-    <section id="testimonials">
+    <motion.section
+      id="testimonials"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        opacity: {
+          ease: "linear",
+          duration: 0.5,
+        },
+        y: {
+          ease: "easeOut",
+          duration: 0.4,
+        },
+      }}
+      exit={{ opacity: 0, transition: { duration: 0.3 } }}
+    >
       <header className="section-header">
         <p>Testimonials</p>
         <h2>Just ask our clients</h2>
@@ -121,6 +137,6 @@ export default function Testimonials() {
           </SwiperSlide>
         </Swiper>
       </div>
-    </section>
+    </motion.section>
   );
 }
