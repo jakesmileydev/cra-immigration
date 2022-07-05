@@ -3,9 +3,20 @@ import { FaUserCheck } from "react-icons/fa";
 import { FaRegIdBadge } from "react-icons/fa";
 import { FaShieldAlt } from "react-icons/fa";
 
+import { motion } from "framer-motion";
+
 export default function Services() {
   return (
-    <section id="services">
+    <motion.section
+      id="services"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+        transition: { ease: "easeInOut", duration: 0.7, delay: 0.3 },
+      }}
+      viewport={{ once: true }}
+    >
       <div className="services-icons">
         <div className="service">
           <FaAddressCard className="icon" />
@@ -50,6 +61,6 @@ export default function Services() {
           documentation, <strong>you could be deported</strong>.
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -72,6 +72,7 @@
   }
 
   & .hours div {
+    font-family: "Source Sans Pro", sans-serif;
     & p:nth-child(even) {
       margin-bottom: 0.8rem;
       @include max-900 {

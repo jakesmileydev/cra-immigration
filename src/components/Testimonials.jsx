@@ -32,18 +32,13 @@ export default function Testimonials() {
     <motion.section
       id="testimonials"
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
-        opacity: {
-          ease: "linear",
-          duration: 0.5,
-        },
-        y: {
-          ease: "easeOut",
-          duration: 0.4,
-        },
+      whileInView={{
+        y: 0,
+        opacity: 1,
+        transition: { ease: "easeInOut", duration: 0.7, delay: 0.4 },
       }}
-      exit={{ opacity: 0, transition: { duration: 0.3 } }}
+      viewport={{ once: true }}
+      // exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
       <header className="section-header">
         <p>Testimonials</p>

@@ -1,10 +1,27 @@
 import { CgChevronRight } from "react-icons/cg";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
 export default function Sidebar() {
   return (
     <aside>
-      <div className="services-container">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          opacity: {
+            ease: "linear",
+            duration: 0.5,
+            delay: 0.4,
+          },
+          y: {
+            ease: "easeOut",
+            duration: 0.4,
+            delay: 0.4,
+          },
+        }}
+        exit={{ opacity: 0, transition: { duration: 0.3 } }}
+        className="services-container"
+      >
         <h3>Immigration Services</h3>
         <ul>
           <li>
@@ -32,8 +49,25 @@ export default function Sidebar() {
             </Link>
           </li>
         </ul>
-      </div>
-      <div className="form-container">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          opacity: {
+            ease: "linear",
+            duration: 0.5,
+            delay: 0.6,
+          },
+          y: {
+            ease: "easeOut",
+            duration: 0.4,
+            delay: 0.6,
+          },
+        }}
+        exit={{ opacity: 0, transition: { duration: 0.3 } }}
+        className="form-container"
+      >
         <h3>Speak With An Attorney</h3>
         <form
           name="contact-form"
@@ -68,7 +102,7 @@ export default function Sidebar() {
           <textarea id="message" name="message"></textarea>
           <button>Send Message</button>
         </form>
-      </div>
+      </motion.div>
     </aside>
   );
 }

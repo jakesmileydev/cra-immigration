@@ -1,8 +1,17 @@
 import signature from "../images/signature.png";
-
+import { motion } from "framer-motion";
 export default function About() {
   return (
-    <section id="about">
+    <motion.section
+      id="about"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+        transition: { ease: "easeInOut", duration: 0.7, delay: 0.3 },
+      }}
+      viewport={{ once: true }}
+    >
       <div className="about-text">
         <header className="section-header">
           <p>About</p>
@@ -32,6 +41,6 @@ export default function About() {
         />
       </div>
       <div className="about-image"></div>
-    </section>
+    </motion.section>
   );
 }

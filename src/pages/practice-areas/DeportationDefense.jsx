@@ -34,10 +34,12 @@ export default function DeportationDefense() {
             opacity: {
               ease: "linear",
               duration: 0.5,
+              delay: 0.2,
             },
             y: {
               ease: "easeOut",
               duration: 0.4,
+              delay: 0.2,
             },
           }}
           exit={{ opacity: 0, transition: { duration: 0.3 } }}

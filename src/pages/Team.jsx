@@ -27,7 +27,24 @@ export default function Team() {
         </div>
       </div>
       <main id="team">
-        <section className="team team-one">
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            opacity: {
+              ease: "linear",
+              duration: 0.5,
+              delay: 0.2,
+            },
+            y: {
+              ease: "easeOut",
+              duration: 0.4,
+              delay: 0.2,
+            },
+          }}
+          exit={{ opacity: 0, transition: { duration: 0.3 } }}
+          className="team team-one"
+        >
           <div className="team-text">
             <header className="section-header">
               <p>Managing Attorney</p>
@@ -63,8 +80,25 @@ export default function Team() {
             {/* <div className="team-signature"></div> */}
           </div>
           <div className="team-image"></div>
-        </section>
-        <section className="team team-two">
+        </motion.section>
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            opacity: {
+              ease: "linear",
+              duration: 0.5,
+              delay: 0.4,
+            },
+            y: {
+              ease: "easeOut",
+              duration: 0.4,
+              delay: 0.4,
+            },
+          }}
+          exit={{ opacity: 0, transition: { duration: 0.3 } }}
+          className="team team-two"
+        >
           <div className="team-image"></div>
           <div className="team-text">
             <header className="section-header">
@@ -100,7 +134,7 @@ export default function Team() {
             </div>
             {/* <div className="about-signature"></div> */}
           </div>
-        </section>
+        </motion.section>
       </main>
     </>
   );

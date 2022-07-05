@@ -26,8 +26,43 @@ export default function Contact() {
           </motion.h1>
         </div>
       </div>
-      <h2>Crocker Russell & Associates Immigration</h2>
-      <div className="contact-icons-container">
+      <motion.h2
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          opacity: {
+            ease: "linear",
+            duration: 0.5,
+            delay: 0.2,
+          },
+          y: {
+            ease: "easeOut",
+            duration: 0.4,
+            delay: 0.2,
+          },
+        }}
+        exit={{ opacity: 0, transition: { duration: 0.3 } }}
+      >
+        Crocker Russell & Associates Immigration
+      </motion.h2>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          opacity: {
+            ease: "linear",
+            duration: 0.5,
+            delay: 0.2,
+          },
+          y: {
+            ease: "easeOut",
+            duration: 0.4,
+            delay: 0.2,
+          },
+        }}
+        exit={{ opacity: 0, transition: { duration: 0.3 } }}
+        className="contact-icons-container"
+      >
         <div className="contact-icons">
           <div>
             <FaMobileAlt className="icon" />
@@ -56,12 +91,30 @@ export default function Contact() {
             <p className="icon-value">email@cralawfirm.com</p>
           </div>
         </div>
-      </div>
-      <div className="contact-container">
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          opacity: {
+            ease: "linear",
+            duration: 0.5,
+            delay: 0.4,
+          },
+          y: {
+            ease: "easeOut",
+            duration: 0.4,
+            delay: 0.4,
+          },
+        }}
+        exit={{ opacity: 0, transition: { duration: 0.3 } }}
+        className="contact-container"
+      >
         <div>
           <header className="section-header">
             <p>Se Habla Español</p>
-            <h3>Get your free consultation</h3>
+            <h3>Get Your Free Consultation</h3>
           </header>
           <div className="contact-description">
             <p>
@@ -124,7 +177,7 @@ export default function Contact() {
 
           <button>Send Message</button>
         </form>
-      </div>
+      </motion.div>
     </main>
   );
 }

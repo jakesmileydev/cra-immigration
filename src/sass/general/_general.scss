@@ -13,7 +13,7 @@ html {
   height: 100%;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lora", serif;
 }
 #root {
   min-height: 100vh;
@@ -26,9 +26,11 @@ main {
 }
 button {
   cursor: pointer;
+  font-family: "Source Sans Pro", serif;
 }
 a {
   cursor: pointer;
+  font-family: "Source Sans Pro", serif;
 }
 section {
   // max-width: 70rem;
@@ -39,8 +41,12 @@ section {
   //   padding: 1rem;
   // }
 }
+h1,
 h2,
+h3,
 h4 {
+  font-family: "Source Sans Pro", serif;
+
   color: $text--dark;
 }
 .section-header {

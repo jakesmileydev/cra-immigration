@@ -5,9 +5,19 @@ import topNineteen from "../images/award-logos/top-nineteen.png";
 import topTwenty from "../images/award-logos/top-twenty.png";
 import expertise from "../images/award-logos/expertise.png";
 
+import { motion } from "framer-motion";
 export default function Awards() {
   return (
-    <section className="awards">
+    <motion.section
+      className="awards"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+        transition: { ease: "easeInOut", duration: 0.7, delay: 0.3 },
+      }}
+      viewport={{ once: true }}
+    >
       <ul>
         <li>
           <img src={texas} alt="texas bar logo"></img>
@@ -41,6 +51,6 @@ export default function Awards() {
           ></img>
         </li>
       </ul>
-    </section>
+    </motion.section>
   );
 }

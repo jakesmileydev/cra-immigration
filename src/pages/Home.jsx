@@ -5,9 +5,11 @@ import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
 import Hero from "../components/Hero";
 
+import { motion } from "framer-motion";
+
 export default function Home() {
   return (
-    <>
+    <motion.div exit={{ opacity: 0, transition: { duration: 0.3 } }}>
       <Hero />
 
       <About />
@@ -15,6 +17,6 @@ export default function Home() {
       <Services />
       <CTA />
       <Testimonials />
-    </>
+    </motion.div>
   );
 }

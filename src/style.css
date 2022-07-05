@@ -217,14 +217,15 @@
   color: white;
   border: 1px solid #b69754;
   margin-left: 3px;
-  font-size: 0.9rem;
   transition: 0.2s;
+  font-weight: 600;
 }
 #hero .overlay .hero-text a:hover {
   background-color: transparent;
   color: #b69754;
 }
 #hero .overlay h1 {
+  color: white;
   font-size: 6rem;
   line-height: 0.9;
   margin-bottom: 1rem;
@@ -240,10 +241,11 @@
   }
 }
 #hero .overlay .pre-header {
+  font-style: italic;
   margin-bottom: 0.6rem;
   color: #b69754;
   font-weight: 500;
-  letter-spacing: 0.8px;
+  font-size: 1.4rem;
 }
 #hero .overlay p {
   margin-bottom: 2.8rem;
@@ -316,10 +318,11 @@
   }
 }
 #cta .cta-container h3 {
+  color: white;
   margin-bottom: 1rem;
   font-size: 2rem;
-  font-weight: 500;
-  text-shadow: 1px 1px 4px #17335a;
+  font-weight: 700;
+  text-shadow: 1px 1px 4px black;
 }
 #cta .cta-container p {
   line-height: 1.3;
@@ -335,7 +338,7 @@
   border: 1px solid #b69754;
   transition: 0.3s;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-weight: 600;
 }
 #cta .cta-container a:hover {
   background: transparent;
@@ -368,6 +371,7 @@
   margin-bottom: 4rem;
   margin-top: 4rem;
   padding: 2rem;
+  font-family: "Source Sans Pro", sans-serif;
   width: 100%;
   padding: 4rem;
 }
@@ -430,6 +434,7 @@
   }
 }
 #testimonials .review .review-text {
+  font-size: 1.1rem;
   margin-top: 1rem;
   line-height: 1.3;
   color: #2c2c2c;
@@ -501,6 +506,9 @@
   #footer .footer-title {
     display: block;
   }
+}
+#footer .hours div {
+  font-family: "Source Sans Pro", sans-serif;
 }
 #footer .hours div p:nth-child(even) {
   margin-bottom: 0.8rem;
@@ -738,7 +746,7 @@
 }
 #services .services-icons .service h4 {
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0.8rem;
 }
 #services .services-icons .service p {
@@ -770,7 +778,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lora", serif;
 }
 
 #root {
@@ -785,14 +793,19 @@ main {
 
 button {
   cursor: pointer;
+  font-family: "Source Sans Pro", serif;
 }
 
 a {
   cursor: pointer;
+  font-family: "Source Sans Pro", serif;
 }
 
+h1,
 h2,
+h3,
 h4 {
+  font-family: "Source Sans Pro", serif;
   color: #2c2c2c;
 }
 
@@ -948,7 +961,8 @@ button {
 #contact h2 {
   text-align: center;
   font-size: 1.6rem;
-  color: #2c2c2c;
+  color: #b69754;
+  font-family: "Lora", serif;
   margin-top: 4rem;
   margin-bottom: 2rem;
   font-style: italic;
@@ -1004,7 +1018,7 @@ button {
   line-height: 1.3;
 }
 #contact .contact-container .contact-description a {
-  font-weight: 500;
+  font-weight: 600;
 }
 @media (max-width: 43.75em) {
   #contact .contact-container {
@@ -1024,6 +1038,7 @@ button {
   font-size: 1.8rem;
 }
 #contact form {
+  font-family: "Source Sans Pro", sans-serif;
   color: #2c2c2c;
   background-color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.373);
@@ -1061,7 +1076,7 @@ button {
   padding: 0.36rem;
   width: 100%;
   height: 10rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 #contact form textarea, #contact form input {
   padding: 0.45rem;
@@ -1081,6 +1096,8 @@ button {
   color: white;
   transition: 0.3s;
   text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
 }
 @media (max-width: 43.75em) {
   #contact form button {
@@ -1097,7 +1114,7 @@ button {
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2.4fr 1fr;
+  grid-template-columns: 2fr 1fr;
   padding: 1rem;
 }
 .practice-area section {

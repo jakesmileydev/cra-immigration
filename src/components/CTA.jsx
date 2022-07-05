@@ -1,8 +1,17 @@
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
 export default function CTA() {
   return (
-    <section id="cta">
+    <motion.section
+      id="cta"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+        transition: { ease: "easeInOut", duration: 0.7, delay: 0.3 },
+      }}
+      viewport={{ once: true }}
+    >
       <div className="cta-overlay">
         <div className="cta-container">
           <h3>Do I Really Need An Immigration Lawyer?</h3>
@@ -17,6 +26,6 @@ export default function CTA() {
           <Link to="/contact">Free Case Review</Link>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
