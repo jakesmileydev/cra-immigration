@@ -3,6 +3,8 @@ import { FaUserCheck } from "react-icons/fa";
 import { FaRegIdBadge } from "react-icons/fa";
 import { FaShieldAlt } from "react-icons/fa";
 
+import { Link } from "react-router-dom";
+
 import { motion } from "framer-motion";
 
 export default function Services() {
@@ -13,31 +15,31 @@ export default function Services() {
       whileInView={{
         y: 0,
         opacity: 1,
-        transition: { ease: "easeInOut", duration: 0.7, delay: 0.3 },
+        transition: { ease: "easeInOut", duration: 0.7, delay: 0.1 },
       }}
       viewport={{ once: true }}
     >
       <div className="services-icons">
-        <div className="service">
+        <Link to="/green-card" className="service">
           <FaAddressCard className="icon" />
           <h4>Green Card</h4>
           <p>Gain permanent lawful residence</p>
-        </div>
-        <div className="service">
+        </Link>
+        <Link to="/citizenship" className="service">
           <FaUserCheck className="icon" />
           <h4>Citizenship</h4>
           <p>Become a citizen of the United States </p>
-        </div>
-        <div className="service">
+        </Link>
+        <Link to="/deportation-defense" className="service">
           <FaShieldAlt className="icon" />
           <h4>Deportation Defense</h4>
           <p>Avoid being deported</p>
-        </div>
-        <div className="service">
+        </Link>
+        <Link to="/visa" className="service">
           <FaRegIdBadge className="icon" />
           <h4>Visa</h4>
           <p>Work Legally in the U.S.</p>
-        </div>
+        </Link>
       </div>
       <div className="services-text">
         <div className="section-header">

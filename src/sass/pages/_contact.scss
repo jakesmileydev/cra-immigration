@@ -11,6 +11,9 @@
     margin-top: 4rem;
     margin-bottom: 2rem;
     font-style: italic;
+    @include max-900 {
+      margin: 2rem;
+    }
   }
   & .contact-icons-container {
     width: 100%;
@@ -22,6 +25,12 @@
       display: grid;
       grid-template-columns: 1fr 1.4fr 1fr;
       padding: 2rem 2rem 0 2rem;
+      @include max-900 {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+      }
       // gap: 4rem;
       & div {
         display: flex;
@@ -35,6 +44,13 @@
         padding: 1rem 1.6rem;
         border-left: 3px solid $gold;
         border-right: 3px solid $gold;
+        @include max-900 {
+          border-left: none;
+          border-right: none;
+          border-top: 2px solid $gold;
+          border-bottom: 2px solid $gold;
+          padding: 2rem 0;
+        }
       }
       & .icon {
         font-size: 2.2rem;
@@ -53,6 +69,7 @@
   & .contact-container {
     margin: 0 auto;
     max-width: 70rem;
+    width: 100%;
     padding: 4rem 4rem 4.6rem 4rem;
     // display: grid;
     // grid-template-columns: 1fr 2fr;

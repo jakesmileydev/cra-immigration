@@ -119,7 +119,7 @@ export default function Footer() {
             <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <Link to="/media">Media</Link>
+            <Link to="/blog">Blog</Link>
           </li>
           <li>
             <Link to="/team">Team</Link>

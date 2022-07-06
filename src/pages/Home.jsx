@@ -9,14 +9,15 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <motion.div exit={{ opacity: 0, transition: { duration: 0.3 } }}>
+    <>
       <Hero />
-
-      <About />
-      <Awards />
-      <Services />
-      <CTA />
-      <Testimonials />
-    </motion.div>
+      <motion.div exit={{ opacity: 0, transition: { duration: 0.3 } }}>
+        <About />
+        <Awards />
+        <Services />
+        <CTA />
+        <Testimonials />
+      </motion.div>
+    </>
   );
 }

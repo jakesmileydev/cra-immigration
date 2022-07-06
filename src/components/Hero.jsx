@@ -12,12 +12,12 @@ export default function Hero() {
             transition={{
               opacity: {
                 ease: "linear",
-                duration: 0.6,
+                duration: 0.8,
                 delay: 0.1,
               },
               x: {
                 ease: "easeOut",
-                duration: 0.5,
+                duration: 0.6,
                 delay: 0.1,
               },
             }}
@@ -32,12 +32,12 @@ export default function Hero() {
               opacity: {
                 ease: "easeInOut",
                 duration: 0.8,
-                delay: 0.5,
+                delay: 0.4,
               },
               x: {
                 ease: "easeOut",
                 duration: 0.6,
-                delay: 0.5,
+                delay: 0.4,
               },
             }}
             exit={{ opacity: 0, transition: { duration: 0.3 } }}

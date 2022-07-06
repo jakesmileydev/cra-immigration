@@ -44,11 +44,11 @@ export default function Header(props) {
           </li>
           <li className="nav__menu-item">
             <Link
-              to="/media"
+              to="/blog"
               className="nav__menu-item__link hover-underline-animation"
               onClick={() => setIsMobileOpen(false)}
             >
-              Media
+              Blog
             </Link>
           </li>
           <li className="nav__menu-item">

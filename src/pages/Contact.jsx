@@ -130,12 +130,7 @@ export default function Contact() {
             </p>
           </div>
         </div>
-        <form
-          name="contact-form"
-          method="POST"
-          data-netlify="true"
-          action="/success"
-        >
+        <form name="contact-form" method="POST" data-netlify="true">
           <div className="form-row">
             <div>
               <input type="hidden" name="form-name" value="contact-form" />

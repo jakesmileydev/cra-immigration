@@ -35,7 +35,7 @@ export default function Testimonials() {
       whileInView={{
         y: 0,
         opacity: 1,
-        transition: { ease: "easeInOut", duration: 0.7, delay: 0.4 },
+        transition: { ease: "easeInOut", duration: 0.6, delay: 0.1 },
       }}
       viewport={{ once: true }}
       // exit={{ opacity: 0, transition: { duration: 0.3 } }}

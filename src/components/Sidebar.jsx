@@ -69,12 +69,7 @@ export default function Sidebar() {
         className="form-container"
       >
         <h3>Speak With An Attorney</h3>
-        <form
-          name="contact-form"
-          action="/success"
-          method="POST"
-          data-netlify="true"
-        >
+        <form name="contact-form" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="contact-form" />
           <label htmlFor="firstName">First Name</label>
           <input

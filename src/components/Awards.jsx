@@ -14,7 +14,7 @@ export default function Awards() {
       whileInView={{
         y: 0,
         opacity: 1,
-        transition: { ease: "easeInOut", duration: 0.7, delay: 0.3 },
+        transition: { ease: "easeInOut", duration: 0.7, delay: 0.1 },
       }}
       viewport={{ once: true }}
     >
