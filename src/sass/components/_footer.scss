@@ -185,7 +185,7 @@
     & .contact ul,
     & .footer-links ul {
       height: 0;
-      overflow: hidden;
+      // overflow: hidden;
       transition: height 0.3s;
     }
     & .arrow {
