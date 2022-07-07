@@ -70,7 +70,7 @@
   & .nav__dropdown {
     height: 0;
     opacity: 0;
-    // overflow: hidden;
+    overflow: hidden;
     transition: height 0.3s ease, opacity 0.5s ease;
     flex-direction: column;
     position: absolute;
@@ -140,7 +140,7 @@
         padding: 0;
       }
       &.mobile-dropdown__open {
-        max-height: 250px;
+        height: 220px;
         opacity: 1;
       }
     }

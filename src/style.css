@@ -125,7 +125,7 @@
     padding: 0;
   }
   .nav .nav__dropdown.mobile-dropdown__open {
-    height: 210px;
+    height: 220px;
     opacity: 1;
   }
 }
@@ -595,7 +595,7 @@
   }
   #footer .contact.open ul, #footer .footer-links.open ul {
     transition: height 0.3s ease;
-    height: 130px;
+    height: 160px;
   }
   #footer .contact.open ul {
     transition: height 0.3s ease;

@@ -162,14 +162,12 @@
     & .footer-links.open {
       & ul {
         transition: height 0.3s ease;
-        overflow: visible;
-        max-height: 150px;
+        height: 160px;
       }
     }
     & .contact.open {
       & ul {
         transition: height 0.3s ease;
-        overflow: visible;
         height: 130px;
       }
     }
@@ -185,7 +183,7 @@
     & .contact ul,
     & .footer-links ul {
       height: 0;
-      // overflow: hidden;
+      overflow: hidden;
       transition: height 0.3s;
     }
     & .arrow {
