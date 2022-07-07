@@ -140,7 +140,7 @@
         padding: 0;
       }
       &.mobile-dropdown__open {
-        height: 210px;
+        max-height: 250px;
         opacity: 1;
       }
     }
