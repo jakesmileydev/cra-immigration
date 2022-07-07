@@ -4,3 +4,7 @@
     publish = "build"
 [functions]
     node_bundler = "esbuild"
+[[redirects]]
+    from = "/*"
+    to = "/"
+    status = 200
