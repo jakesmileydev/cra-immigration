@@ -30,8 +30,8 @@ This is a website and blog built for an immigration law firm. It uses Contentful
       <li>Blog Post Snippet - Long Text (limit 300 - 1000 characters)
       <li>Blog Post Text - Long Text (no limit)</li>
     </ul>
-        <p> The "Snippet" content should be the first paragraph from the blog article or a short description of it. This is what is displayed on the Blog page before clicking the link to the whole article. You can set this as a note in the content model for clients.</p>
-    <p>The "Blog Post Text" content supports markdown. Spaces between text will create a paragraph, bold will create a strong, and h3 elements are automatically styled with the left border etc... You may have to coach your client or just be aware when creating your own content</p>
+        <p> The "Snippet" content should be the first paragraph from the blog article or a short description of it. This is what is displayed on the Blog page before clicking the link to the whole article. You can set this as a note in the content model.</p>
+    <p>The "Blog Post Text" content supports markdown. Spaces between text will create a paragraph, bold will create a strong, and h3 elements are automatically styled with the left border etc... Just be aware when creating your own content</p>
     <p>Now is a good time to grab your space id and access token from contentful, which should have been automatically created for you. From your contentful account page go to settings > api keys</p>
   </li>
   <li><strong>Create a netlify account and set up environment variables</strong>
